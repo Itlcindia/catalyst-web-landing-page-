@@ -1,5 +1,13 @@
-// Initialize Lucide Icons & Splash Screen on Load
-document.addEventListener('DOMContentLoaded', () => {
+// Robust DOM Ready Helper (Guarantees execution even if script is loaded after DOM)
+function onReady(fn) {
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    setTimeout(fn, 1);
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+onReady(() => {
   if (window.lucide) {
     lucide.createIcons();
   }
@@ -37,7 +45,12 @@ function initAccordionTouchHandler() {
 // -------------------------------------------------------------
 // SAMAJWADI PARTY SPLASH SCREEN LOADING LOGIC
 // -------------------------------------------------------------
+let splashInitialized = false;
+
 function initSplashScreen() {
+  if (splashInitialized) return;
+  splashInitialized = true;
+
   const loadingBar = document.getElementById("loadingProgressBar");
   const loadingCycle = document.getElementById("loadingCycleContainer");
   const loadingPercent = document.getElementById("loadingPercent");
@@ -60,8 +73,15 @@ function initSplashScreen() {
     }
   };
 
+  // Failsafe auto-dismiss after 3.5 seconds max
+  setTimeout(() => {
+    if (!hasTransitioned) {
+      handleExitSplash();
+    }
+  }, 3500);
+
   const interval = setInterval(() => {
-    progress += Math.floor(Math.random() * 12) + 4;
+    progress += Math.floor(Math.random() * 14) + 6;
     if (progress >= 100) {
       progress = 100;
       clearInterval(interval);
@@ -98,14 +118,16 @@ function initSplashScreen() {
         }
 
         if (window.confetti) {
-          confetti({
-            particleCount: 100,
-            spread: 90,
-            origin: { y: 0.5 }
-          });
+          try {
+            confetti({
+              particleCount: 100,
+              spread: 90,
+              origin: { y: 0.5 }
+            });
+          } catch(e) {}
         }
 
-        // Exact 2.2-Second Center Hold (within 1-3 sec range) then auto-transition to next page
+        // Exact 2.2-Second Center Hold then auto-transition to next page
         setTimeout(() => {
           handleExitSplash();
         }, 2200);
@@ -121,7 +143,7 @@ function initSplashScreen() {
       if (loadingCycle) loadingCycle.style.left = `${progress}%`;
       if (loadingPercent) loadingPercent.innerText = `${progress}%`;
     }
-  }, 120);
+  }, 100);
 
   if (enterBtn) enterBtn.addEventListener("click", handleExitSplash);
   const skipBtn = document.getElementById("skipSplashBtn");
