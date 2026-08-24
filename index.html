@@ -128,16 +128,16 @@
 
     <!-- Dedicated Dead Center Zoom-In Cycle Overlay (Emerges 100% PURE WHITE from Dead Center of Screen) -->
     <div id="centerZoomCycleModal" class="fixed inset-0 z-50 pointer-events-none flex items-center justify-center hidden">
-      <div id="centerZoomCycleCard" class="w-72 h-52 sm:w-96 sm:h-72 md:w-[480px] md:h-80 relative flex items-center justify-center transform scale-50 opacity-0 transition-all duration-700 ease-out [clip-path:inset(0_0_18%_0)]">
+      <div id="centerZoomCycleCard" class="w-72 h-52 sm:w-96 sm:h-72 md:w-[480px] md:h-80 relative flex items-center justify-center transform scale-50 opacity-0 transition-all duration-700 ease-out">
         
         <video id="centerCycleVideoElement" autoplay loop muted playsinline class="hidden">
           <source src="./0812.mp4" type="video/mp4"/>
           <source src="0812.mp4" type="video/mp4"/>
         </video>
 
-        <canvas id="centerCycleCanvasElement" class="w-full h-full object-contain filter drop-shadow-[0_0_60px_rgba(255,255,255,1)]"></canvas>
+        <canvas id="centerCycleCanvasElement" class="hidden w-full h-full object-contain filter drop-shadow-[0_0_60px_rgba(255,255,255,1)]"></canvas>
 
-        <svg id="centerCycleSvgFallback" class="w-full h-full object-contain filter drop-shadow-[0_0_40px_rgba(255,255,255,0.95)]" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="centerCycleSvgFallback" class="w-full h-full object-contain filter drop-shadow-[0_0_50px_rgba(255,255,255,1)]" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- Rear Wheel -->
           <circle cx="25" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
           <circle cx="25" cy="42" r="2.5" fill="#FFFFFF"/>
@@ -195,10 +195,10 @@
       }
 
       function triggerCenterEmergence() {
-        if (cycle) { cycle.style.transition = 'opacity 0.3s ease'; cycle.style.opacity = '0'; }
+        if (cycle) { cycle.style.transition = 'opacity 0.4s ease'; cycle.style.opacity = '0'; }
         var track = bar ? bar.parentElement : null;
-        if (track) { track.style.transition = 'opacity 0.3s ease'; track.style.opacity = '0'; }
-        if (percent) { percent.style.transition = 'opacity 0.3s ease'; percent.style.opacity = '0'; }
+        if (track) { track.style.transition = 'opacity 0.4s ease'; track.style.opacity = '0'; }
+        if (percent) { percent.style.transition = 'opacity 0.4s ease'; percent.style.opacity = '0'; }
 
         var centerModal = document.getElementById("centerZoomCycleModal");
         var centerCard = document.getElementById("centerZoomCycleCard");
@@ -206,9 +206,9 @@
         if (centerModal && centerCard) {
           centerModal.classList.remove("hidden");
           setTimeout(function() {
-            centerCard.style.transform = "scale(1.5)";
+            centerCard.style.transform = "scale(1.6)";
             centerCard.style.opacity = "1";
-          }, 50);
+          }, 60);
         }
 
         if (window.confetti) {
@@ -217,7 +217,7 @@
           } catch(e) {}
         }
 
-        setTimeout(hideSplash, 1800);
+        setTimeout(hideSplash, 2000);
       }
 
       function step() {
@@ -241,8 +241,8 @@
 
       requestAnimationFrame(step);
 
-      // Failsafe max 3.5s
-      setTimeout(hideSplash, 3500);
+      // Failsafe max 3.8s
+      setTimeout(hideSplash, 3800);
 
       if (splash) {
         splash.addEventListener('click', hideSplash);
