@@ -297,7 +297,7 @@ body {
 }
 
 /* ===================================================================
-   GLOSSY 3D BLUE PILL BUTTON STYLING (EXACT USER DESIGN MATCH)
+   SAMAJWADI RED-TO-GREEN GLOSSY 3D PILL BUTTON STYLING (EXACT USER DESIGN)
    =================================================================== */
 .btn-pill-blue, 
 button.btn-pill-blue, 
@@ -305,16 +305,16 @@ a.btn-pill-blue,
 .year-tab-btn.active,
 .booth-tab-btn.active,
 .admin-tab-btn.active {
-  background: linear-gradient(180deg, #5751f3 0%, #3b32c6 100%) !important;
-  border: 1.5px solid #6366f1 !important;
-  border-radius: 18px !important;
+  background: linear-gradient(90deg, #dc2626 0%, #881337 45%, #047857 100%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 9999px !important;
   color: #ffffff !important;
   font-weight: 700 !important;
   letter-spacing: 0.01em;
   box-shadow: 
     inset 0 1.5px 2px rgba(255, 255, 255, 0.45),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.25),
-    0 4px 14px rgba(67, 56, 202, 0.35) !important;
+    inset 0 -2px 3px rgba(0, 0, 0, 0.3),
+    0 4px 14px rgba(220, 38, 38, 0.35) !important;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -325,12 +325,12 @@ a.btn-pill-blue,
 .btn-pill-blue:hover,
 button.btn-pill-blue:hover,
 a.btn-pill-blue:hover {
-  background: linear-gradient(180deg, #6366f1 0%, #312ab5 100%) !important;
-  border-color: #818cf8 !important;
+  background: linear-gradient(90deg, #ef4444 0%, #9f1239 45%, #059669 100%) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
   box-shadow: 
     inset 0 1.5px 3px rgba(255, 255, 255, 0.6),
     inset 0 -2px 4px rgba(0, 0, 0, 0.3),
-    0 6px 20px rgba(67, 56, 202, 0.5) !important;
+    0 6px 20px rgba(220, 38, 38, 0.5) !important;
   transform: translateY(-1.5px) !important;
 }
 
@@ -340,7 +340,7 @@ a.btn-pill-blue:active {
   transform: translateY(1px) !important;
   box-shadow: 
     inset 0 2px 4px rgba(0, 0, 0, 0.35),
-    0 2px 8px rgba(67, 56, 202, 0.3) !important;
+    0 2px 8px rgba(220, 38, 38, 0.3) !important;
 }
 
 /* Inactive Glossy Pill Tab Buttons */
@@ -349,7 +349,7 @@ a.btn-pill-blue:active {
 .admin-tab-btn:not(.active) {
   background: #ffffff !important;
   border: 1.5px solid #cbd5e1 !important;
-  border-radius: 18px !important;
+  border-radius: 9999px !important;
   color: #334155 !important;
   font-weight: 600 !important;
   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.8), 0 2px 6px rgba(15, 23, 42, 0.04) !important;
@@ -359,9 +359,9 @@ a.btn-pill-blue:active {
 .year-tab-btn:not(.active):hover,
 .booth-tab-btn:not(.active):hover,
 .admin-tab-btn:not(.active):hover {
-  border-color: #6366f1 !important;
-  color: #4338ca !important;
-  background: #f8fafc !important;
+  border-color: #e11d48 !important;
+  color: #be123c !important;
+  background: #fff1f2 !important;
   transform: translateY(-1px) !important;
 }
 
@@ -501,4 +501,26 @@ a.btn-pill-blue:active {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ===================================================================
+   SAMAJWADI RED & GREEN GRADIENT CARD STYLING
+   =================================================================== */
+.soft-neumorphic-card {
+  background: linear-gradient(145deg, #e11d48 0%, #be123c 45%, #047857 100%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 28px !important;
+  box-shadow: 
+    0 15px 35px rgba(225, 29, 72, 0.25), 
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  color: #ffffff !important;
+}
+
+.soft-neumorphic-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 
+    0 22px 45px rgba(225, 29, 72, 0.4), 
+    inset 0 2px 4px rgba(255, 255, 255, 0.6) !important;
 }
