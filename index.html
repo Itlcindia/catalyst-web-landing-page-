@@ -150,6 +150,52 @@
     </footer>
   </div>
 
+  <!-- Bulletproof Immediate Inline Splash Screen Driver -->
+  <script>
+    (function() {
+      var splash = document.getElementById('splashScreen');
+      var bar = document.getElementById('loadingProgressBar');
+      var cycle = document.getElementById('loadingCycleContainer');
+      var percent = document.getElementById('loadingPercent');
+      var prog = 0;
+      var done = false;
+
+      function hideSplash() {
+        if (done) return;
+        done = true;
+        if (splash) {
+          splash.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+          splash.style.opacity = '0';
+          splash.style.transform = 'scale(1.03)';
+          setTimeout(function() { splash.style.display = 'none'; }, 600);
+        }
+      }
+
+      var timer = setInterval(function() {
+        prog += Math.floor(Math.random() * 16) + 8;
+        if (prog >= 100) {
+          prog = 100;
+          clearInterval(timer);
+          if (bar) bar.style.width = '100%';
+          if (cycle) cycle.style.left = '100%';
+          if (percent) percent.innerText = '100%';
+          setTimeout(hideSplash, 400);
+        } else {
+          if (bar) bar.style.width = prog + '%';
+          if (cycle) cycle.style.left = prog + '%';
+          if (percent) percent.innerText = prog + '%';
+        }
+      }, 70);
+
+      // Failsafe auto-dismiss after 2.5 seconds max
+      setTimeout(hideSplash, 2500);
+
+      if (splash) {
+        splash.addEventListener('click', hideSplash);
+      }
+    })();
+  </script>
+
   <!-- Background Grid & Light Effects -->
   <div class="fixed inset-0 bg-grid-pattern opacity-60 pointer-events-none z-0"></div>
   <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-rose-500/10 blur-[140px] rounded-full pointer-events-none z-0"></div>
