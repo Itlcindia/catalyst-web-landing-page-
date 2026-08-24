@@ -137,10 +137,27 @@
 
         <canvas id="centerCycleCanvasElement" class="w-full h-full object-contain filter drop-shadow-[0_0_60px_rgba(255,255,255,1)]"></canvas>
 
+        <svg id="centerCycleSvgFallback" class="w-full h-full object-contain filter drop-shadow-[0_0_40px_rgba(255,255,255,0.95)]" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Rear Wheel -->
+          <circle cx="25" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
+          <circle cx="25" cy="42" r="2.5" fill="#FFFFFF"/>
+          <!-- Front Wheel -->
+          <circle cx="75" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
+          <circle cx="75" cy="42" r="2.5" fill="#FFFFFF"/>
+          <!-- Frame & Chain -->
+          <path d="M25 42 L42 42 L55 24 L25 42 Z" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" fill="none"/>
+          <path d="M42 42 L38 20 L46 20" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Handlebar & Front Fork -->
+          <path d="M75 42 L64 16 L72 16 M68 22 L55 24" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Seat -->
+          <path d="M33 20 L43 20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+          <!-- Pedal Crank -->
+          <circle cx="42" cy="42" r="4" fill="#FFFFFF"/>
+        </svg>
+
       </div>
     </div>
 
-    <!-- FOOTER TYPOGRAPHY & ENTER PORTAL BUTTON -->
     <!-- FOOTER TYPOGRAPHY -->
     <footer class="mb-2 sm:mb-4 text-center pb-2 flex flex-col items-center space-y-1.5 shrink-0">
       <h1 class="text-xl sm:text-3xl md:text-4xl font-black tracking-wider uppercase drop-shadow-2xl text-white">
@@ -149,15 +166,19 @@
     </footer>
   </div>
 
-  <!-- Bulletproof 60 FPS Ultra-Smooth Inline Splash Screen Driver -->
+  <!-- Bulletproof 60 FPS Ultra-Smooth Inline Splash Screen Driver with 100% Dead-Center Emergence -->
   <script>
     (function() {
       var splash = document.getElementById('splashScreen');
       var bar = document.getElementById('loadingProgressBar');
       var cycle = document.getElementById('loadingCycleContainer');
       var percent = document.getElementById('loadingPercent');
-      var currentProg = 0;
+      var currentProg = 1;
       var done = false;
+
+      if (bar) bar.style.width = '1%';
+      if (cycle) cycle.style.left = '1%';
+      if (percent) percent.innerText = '1%';
 
       if (bar) bar.style.transition = 'width 0.08s linear';
       if (cycle) cycle.style.transition = 'left 0.08s linear';
@@ -173,6 +194,32 @@
         }
       }
 
+      function triggerCenterEmergence() {
+        if (cycle) { cycle.style.transition = 'opacity 0.3s ease'; cycle.style.opacity = '0'; }
+        var track = bar ? bar.parentElement : null;
+        if (track) { track.style.transition = 'opacity 0.3s ease'; track.style.opacity = '0'; }
+        if (percent) { percent.style.transition = 'opacity 0.3s ease'; percent.style.opacity = '0'; }
+
+        var centerModal = document.getElementById("centerZoomCycleModal");
+        var centerCard = document.getElementById("centerZoomCycleCard");
+
+        if (centerModal && centerCard) {
+          centerModal.classList.remove("hidden");
+          setTimeout(function() {
+            centerCard.style.transform = "scale(1.5)";
+            centerCard.style.opacity = "1";
+          }, 50);
+        }
+
+        if (window.confetti) {
+          try {
+            confetti({ particleCount: 100, spread: 90, origin: { y: 0.5 } });
+          } catch(e) {}
+        }
+
+        setTimeout(hideSplash, 1800);
+      }
+
       function step() {
         if (done) return;
         if (currentProg < 100) {
@@ -185,7 +232,7 @@
           if (percent) percent.innerText = roundPct + '%';
 
           if (currentProg >= 100) {
-            setTimeout(hideSplash, 350);
+            triggerCenterEmergence();
           } else {
             requestAnimationFrame(step);
           }
@@ -194,8 +241,8 @@
 
       requestAnimationFrame(step);
 
-      // Failsafe max 2.8s
-      setTimeout(hideSplash, 2800);
+      // Failsafe max 3.5s
+      setTimeout(hideSplash, 3500);
 
       if (splash) {
         splash.addEventListener('click', hideSplash);
