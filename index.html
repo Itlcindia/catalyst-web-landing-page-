@@ -149,45 +149,53 @@
     </footer>
   </div>
 
-  <!-- Bulletproof Immediate Inline Splash Screen Driver -->
+  <!-- Bulletproof 60 FPS Ultra-Smooth Inline Splash Screen Driver -->
   <script>
     (function() {
       var splash = document.getElementById('splashScreen');
       var bar = document.getElementById('loadingProgressBar');
       var cycle = document.getElementById('loadingCycleContainer');
       var percent = document.getElementById('loadingPercent');
-      var prog = 0;
+      var currentProg = 0;
       var done = false;
+
+      if (bar) bar.style.transition = 'width 0.08s linear';
+      if (cycle) cycle.style.transition = 'left 0.08s linear';
 
       function hideSplash() {
         if (done) return;
         done = true;
         if (splash) {
-          splash.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+          splash.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
           splash.style.opacity = '0';
           splash.style.transform = 'scale(1.03)';
           setTimeout(function() { splash.style.display = 'none'; }, 600);
         }
       }
 
-      var timer = setInterval(function() {
-        prog += Math.floor(Math.random() * 16) + 8;
-        if (prog >= 100) {
-          prog = 100;
-          clearInterval(timer);
-          if (bar) bar.style.width = '100%';
-          if (cycle) cycle.style.left = '100%';
-          if (percent) percent.innerText = '100%';
-          setTimeout(hideSplash, 400);
-        } else {
-          if (bar) bar.style.width = prog + '%';
-          if (cycle) cycle.style.left = prog + '%';
-          if (percent) percent.innerText = prog + '%';
-        }
-      }, 70);
+      function step() {
+        if (done) return;
+        if (currentProg < 100) {
+          currentProg += 0.85;
+          if (currentProg > 100) currentProg = 100;
 
-      // Failsafe auto-dismiss after 2.5 seconds max
-      setTimeout(hideSplash, 2500);
+          var roundPct = Math.floor(currentProg);
+          if (bar) bar.style.width = currentProg + '%';
+          if (cycle) cycle.style.left = currentProg + '%';
+          if (percent) percent.innerText = roundPct + '%';
+
+          if (currentProg >= 100) {
+            setTimeout(hideSplash, 350);
+          } else {
+            requestAnimationFrame(step);
+          }
+        }
+      }
+
+      requestAnimationFrame(step);
+
+      // Failsafe max 2.8s
+      setTimeout(hideSplash, 2800);
 
       if (splash) {
         splash.addEventListener('click', hideSplash);
