@@ -1,13 +1,5 @@
-// Robust DOM Ready Helper (Guarantees execution even if script is loaded after DOM)
-function onReady(fn) {
-  if (document.readyState === 'interactive' || document.readyState === 'complete') {
-    setTimeout(fn, 1);
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-}
-
-onReady(() => {
+// Initialize Lucide Icons & Splash Screen on Load
+document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) {
     lucide.createIcons();
   }
@@ -45,12 +37,7 @@ function initAccordionTouchHandler() {
 // -------------------------------------------------------------
 // SAMAJWADI PARTY SPLASH SCREEN LOADING LOGIC
 // -------------------------------------------------------------
-let splashInitialized = false;
-
 function initSplashScreen() {
-  if (splashInitialized) return;
-  splashInitialized = true;
-
   const loadingBar = document.getElementById("loadingProgressBar");
   const loadingCycle = document.getElementById("loadingCycleContainer");
   const loadingPercent = document.getElementById("loadingPercent");
@@ -73,15 +60,8 @@ function initSplashScreen() {
     }
   };
 
-  // Failsafe auto-dismiss after 3.5 seconds max
-  setTimeout(() => {
-    if (!hasTransitioned) {
-      handleExitSplash();
-    }
-  }, 3500);
-
   const interval = setInterval(() => {
-    progress += Math.floor(Math.random() * 14) + 6;
+    progress += Math.floor(Math.random() * 12) + 4;
     if (progress >= 100) {
       progress = 100;
       clearInterval(interval);
@@ -118,16 +98,14 @@ function initSplashScreen() {
         }
 
         if (window.confetti) {
-          try {
-            confetti({
-              particleCount: 100,
-              spread: 90,
-              origin: { y: 0.5 }
-            });
-          } catch(e) {}
+          confetti({
+            particleCount: 100,
+            spread: 90,
+            origin: { y: 0.5 }
+          });
         }
 
-        // Exact 2.2-Second Center Hold then auto-transition to next page
+        // Exact 2.2-Second Center Hold (within 1-3 sec range) then auto-transition to next page
         setTimeout(() => {
           handleExitSplash();
         }, 2200);
@@ -143,7 +121,7 @@ function initSplashScreen() {
       if (loadingCycle) loadingCycle.style.left = `${progress}%`;
       if (loadingPercent) loadingPercent.innerText = `${progress}%`;
     }
-  }, 100);
+  }, 120);
 
   if (enterBtn) enterBtn.addEventListener("click", handleExitSplash);
   const skipBtn = document.getElementById("skipSplashBtn");
@@ -491,7 +469,7 @@ const adminTabContent = {
       <span class="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded font-mono font-bold">Active Onboarding</span>
     </div>
     <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer group" onclick="openImageModal('/1 (6).png')">
-      <img src="./1 (6).png" alt="Onboarding & Data Upload Status" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
+      <img src="/1 (6).png" alt="Onboarding & Data Upload Status" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
     </div>
   `,
   tasks: `
@@ -502,7 +480,7 @@ const adminTabContent = {
       <span class="text-[10px] bg-rose-100 text-rose-700 px-2 py-0.5 rounded font-mono font-bold">1,420 Directives</span>
     </div>
     <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer group" onclick="openImageModal('/1 (12).png')">
-      <img src="./1 (12).png" alt="Karyakarta Communication Measurement" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
+      <img src="/1 (12).png" alt="Karyakarta Communication Measurement" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
     </div>
   `,
   workers: `
@@ -513,7 +491,7 @@ const adminTabContent = {
       <span class="text-[10px] bg-cyan-100 text-cyan-700 px-2 py-0.5 rounded font-mono font-bold">48,500 Active</span>
     </div>
     <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer group" onclick="openImageModal('/1 (1).png')">
-      <img src="./1 (1).png" alt="Worker Performance Dashboard" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
+      <img src="/1 (1).png" alt="Worker Performance Dashboard" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
     </div>
   `,
   surveys: `
@@ -524,7 +502,7 @@ const adminTabContent = {
       <span class="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded font-mono font-bold">5.3M Records</span>
     </div>
     <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer group" onclick="openImageModal('/1 (7).png')">
-      <img src="./1 (7).png" alt="Survey Activity Status" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
+      <img src="/1 (7).png" alt="Survey Activity Status" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
     </div>
   `,
   reports: `
@@ -535,7 +513,7 @@ const adminTabContent = {
       <span class="text-[10px] bg-amber-100 text-amber-700 px-2 py-0.5 rounded font-mono font-bold">85.4% Accuracy</span>
     </div>
     <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer group" onclick="openImageModal('/1 (8).png')">
-      <img src="./1 (8).png" alt="Membership Added Dashboard" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
+      <img src="/1 (8).png" alt="Membership Added Dashboard" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
     </div>
   `
 };
@@ -783,7 +761,7 @@ const historicalElectionData = {
     badge: "2022 UP CONSTITUENCY MAP",
     headline: "2022 Uttar Pradesh Assembly Election",
     subtext: "Samajwadi Party secured 111 seats (Alliance 125 seats) with 32.06% Vote Share — a massive +10.24% vote surge!",
-    image: "./Historical Election Data/2022.png",
+    image: "/Historical Election Data/2022.png",
     turnout: "60.79%",
     spSeats: "111 (Alliance 125)",
     spVoteShare: "32.06%",
@@ -804,7 +782,7 @@ const historicalElectionData = {
     badge: "2017 UP CONSTITUENCY MAP",
     headline: "2017 Uttar Pradesh Assembly Election",
     subtext: "Samajwadi Party won 47 seats with 21.82% Vote Share in a highly competitive 403-seat election cycle.",
-    image: "./Historical Election Data/2017.png",
+    image: "/Historical Election Data/2017.png",
     turnout: "61.04%",
     spSeats: "47 Seats",
     spVoteShare: "21.82%",
@@ -823,7 +801,7 @@ const historicalElectionData = {
     badge: "2012 UP CONSTITUENCY MAP (SP LANDSLIDE VICTORY)",
     headline: "2012 Uttar Pradesh Assembly Election — SP Landslide Victory",
     subtext: "Samajwadi Party scored a historic full majority victory with 224 seats (29.13% Vote Share) under Shri Akhilesh Yadav ji!",
-    image: "./Historical Election Data/2012.png",
+    image: "/Historical Election Data/2012.png",
     turnout: "59.40%",
     spSeats: "224 Seats (Full Majority)",
     spVoteShare: "29.13%",
@@ -842,7 +820,7 @@ const historicalElectionData = {
     badge: "2007 UP CONSTITUENCY MAP",
     headline: "2007 Uttar Pradesh Assembly Election",
     subtext: "Samajwadi Party won 97 seats with 25.43% Vote Share, serving as the primary opposition force in UP.",
-    image: "./Historical Election Data/2007.png",
+    image: "/Historical Election Data/2007.png",
     turnout: "45.96%",
     spSeats: "97 Seats",
     spVoteShare: "25.43%",
@@ -942,3 +920,17 @@ function switchHistoricalYear(year) {
       .join("");
   }
 }
+
+// Expose functions globally for inline HTML event handlers
+window.switchHistoricalYear = switchHistoricalYear;
+window.selectHierarchyNode = selectHierarchyNode;
+window.switchBooth = switchBooth;
+window.setAdminTab = setAdminTab;
+window.triggerAppTask = triggerAppTask;
+window.setMapLevel = setMapLevel;
+window.openImageModal = openImageModal;
+window.closeImageModal = closeImageModal;
+window.openDemoModal = openDemoModal;
+window.closeDemoModal = closeDemoModal;
+window.handleDemoSubmit = handleDemoSubmit;
+window.scrollToSection = scrollToSection;

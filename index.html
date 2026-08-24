@@ -86,15 +86,16 @@
             
             <!-- Video Source for Real-Time Background Removal Engine (0812.mp4) -->
             <video id="cycleVideoElement" autoplay loop muted playsinline class="hidden">
-              <source src="./0812.mp4" type="video/mp4"/>
+              <source src="/0812.mp4" type="video/mp4"/>
               <source src="0812.mp4" type="video/mp4"/>
+              <source src="/v1.mp4" type="video/mp4"/>
             </video>
 
             <!-- Real-Time Transparent Canvas (Renders ONLY pure white cycle with 100% transparent background) -->
             <canvas id="cycleCanvasElement" class="w-full h-full object-contain filter drop-shadow-[0_4px_10px_rgba(255,255,255,0.7)]"></canvas>
 
             <!-- Razor Sharp Pure White Vector Bicycle Fallback -->
-            <svg id="cycleSvgFallback" class="w-full h-full object-contain filter drop-shadow-[0_4px_8px_rgba(255,255,255,0.9)]" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="cycleSvgFallback" class="w-full h-full object-contain hidden filter drop-shadow-[0_4px_8px_rgba(255,255,255,0.9)]" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Rear Wheel -->
               <circle cx="25" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
               <circle cx="25" cy="42" r="2.5" fill="#FFFFFF"/>
@@ -128,36 +129,19 @@
 
     <!-- Dedicated Dead Center Zoom-In Cycle Overlay (Emerges 100% PURE WHITE from Dead Center of Screen) -->
     <div id="centerZoomCycleModal" class="fixed inset-0 z-50 pointer-events-none flex items-center justify-center hidden">
-      <div id="centerZoomCycleCard" class="w-72 h-52 sm:w-96 sm:h-72 md:w-[480px] md:h-80 relative flex items-center justify-center transform scale-50 opacity-0 transition-all duration-700 ease-out">
+      <div id="centerZoomCycleCard" class="w-72 h-52 sm:w-96 sm:h-72 md:w-[480px] md:h-80 relative flex items-center justify-center transform scale-50 opacity-0 transition-all duration-700 ease-out [clip-path:inset(0_0_18%_0)]">
         
         <video id="centerCycleVideoElement" autoplay loop muted playsinline class="hidden">
-          <source src="./0812.mp4" type="video/mp4"/>
+          <source src="/0812.mp4" type="video/mp4"/>
           <source src="0812.mp4" type="video/mp4"/>
         </video>
 
-        <canvas id="centerCycleCanvasElement" class="hidden w-full h-full object-contain filter drop-shadow-[0_0_60px_rgba(255,255,255,1)]"></canvas>
-
-        <svg id="centerCycleSvgFallback" class="w-full h-full object-contain filter drop-shadow-[0_0_50px_rgba(255,255,255,1)]" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Rear Wheel -->
-          <circle cx="25" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
-          <circle cx="25" cy="42" r="2.5" fill="#FFFFFF"/>
-          <!-- Front Wheel -->
-          <circle cx="75" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
-          <circle cx="75" cy="42" r="2.5" fill="#FFFFFF"/>
-          <!-- Frame & Chain -->
-          <path d="M25 42 L42 42 L55 24 L25 42 Z" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" fill="none"/>
-          <path d="M42 42 L38 20 L46 20" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- Handlebar & Front Fork -->
-          <path d="M75 42 L64 16 L72 16 M68 22 L55 24" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- Seat -->
-          <path d="M33 20 L43 20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
-          <!-- Pedal Crank -->
-          <circle cx="42" cy="42" r="4" fill="#FFFFFF"/>
-        </svg>
+        <canvas id="centerCycleCanvasElement" class="w-full h-full object-contain filter drop-shadow-[0_0_60px_rgba(255,255,255,1)]"></canvas>
 
       </div>
     </div>
 
+    <!-- FOOTER TYPOGRAPHY & ENTER PORTAL BUTTON -->
     <!-- FOOTER TYPOGRAPHY -->
     <footer class="mb-2 sm:mb-4 text-center pb-2 flex flex-col items-center space-y-1.5 shrink-0">
       <h1 class="text-xl sm:text-3xl md:text-4xl font-black tracking-wider uppercase drop-shadow-2xl text-white">
@@ -165,90 +149,6 @@
       </h1>
     </footer>
   </div>
-
-  <!-- Bulletproof 60 FPS Ultra-Smooth Inline Splash Screen Driver with 100% Dead-Center Emergence -->
-  <script>
-    (function() {
-      var splash = document.getElementById('splashScreen');
-      var bar = document.getElementById('loadingProgressBar');
-      var cycle = document.getElementById('loadingCycleContainer');
-      var percent = document.getElementById('loadingPercent');
-      var currentProg = 1;
-      var done = false;
-
-      if (bar) bar.style.width = '1%';
-      if (cycle) cycle.style.left = '1%';
-      if (percent) percent.innerText = '1%';
-
-      if (bar) bar.style.transition = 'width 0.08s linear';
-      if (cycle) cycle.style.transition = 'left 0.08s linear';
-
-      function hideSplash() {
-        if (done) return;
-        done = true;
-        if (splash) {
-          splash.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-          splash.style.opacity = '0';
-          splash.style.transform = 'scale(1.03)';
-          setTimeout(function() { splash.style.display = 'none'; }, 600);
-        }
-      }
-
-      function triggerCenterEmergence() {
-        if (cycle) { cycle.style.transition = 'opacity 0.4s ease'; cycle.style.opacity = '0'; }
-        var track = bar ? bar.parentElement : null;
-        if (track) { track.style.transition = 'opacity 0.4s ease'; track.style.opacity = '0'; }
-        if (percent) { percent.style.transition = 'opacity 0.4s ease'; percent.style.opacity = '0'; }
-
-        var centerModal = document.getElementById("centerZoomCycleModal");
-        var centerCard = document.getElementById("centerZoomCycleCard");
-
-        if (centerModal && centerCard) {
-          centerModal.classList.remove("hidden");
-          setTimeout(function() {
-            centerCard.style.transform = "scale(1.6)";
-            centerCard.style.opacity = "1";
-          }, 60);
-        }
-
-        if (window.confetti) {
-          try {
-            confetti({ particleCount: 100, spread: 90, origin: { y: 0.5 } });
-          } catch(e) {}
-        }
-
-        setTimeout(hideSplash, 2000);
-      }
-
-      function step() {
-        if (done) return;
-        if (currentProg < 100) {
-          currentProg += 0.85;
-          if (currentProg > 100) currentProg = 100;
-
-          var roundPct = Math.floor(currentProg);
-          if (bar) bar.style.width = currentProg + '%';
-          if (cycle) cycle.style.left = currentProg + '%';
-          if (percent) percent.innerText = roundPct + '%';
-
-          if (currentProg >= 100) {
-            triggerCenterEmergence();
-          } else {
-            requestAnimationFrame(step);
-          }
-        }
-      }
-
-      requestAnimationFrame(step);
-
-      // Failsafe max 3.8s
-      setTimeout(hideSplash, 3800);
-
-      if (splash) {
-        splash.addEventListener('click', hideSplash);
-      }
-    })();
-  </script>
 
   <!-- Background Grid & Light Effects -->
   <div class="fixed inset-0 bg-grid-pattern opacity-60 pointer-events-none z-0"></div>
@@ -261,7 +161,7 @@
       <a href="#" class="flex items-center group">
         <!-- Standalone Samajwadi Party Logo Image -->
         <div class="h-14 w-auto rounded-xl overflow-hidden border border-slate-200/80 shadow-md group-hover:scale-105 transition-transform flex items-center bg-white p-0.5">
-          <img src="./sp_logo.png" alt="Samajwadi Party Logo" class="h-full w-auto object-contain rounded-lg">
+          <img src="/sp_logo.png" alt="Samajwadi Party Logo" class="h-full w-auto object-contain rounded-lg">
         </div>
       </a>
 
@@ -301,7 +201,7 @@
         <!-- TOP CENTER 3D FLOATING LOGO ICON -->
         <div class="relative z-20 text-center mb-6">
           <div class="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-white border border-slate-200 shadow-xl p-3 transform hover:scale-110 transition-transform duration-300 group cursor-pointer" onclick="openImageModal('/sp_logo.png')">
-            <img src="./sp_logo.png" alt="Samajwadi Party Logo" class="w-full h-full object-contain filter drop-shadow-md">
+            <img src="/sp_logo.png" alt="Samajwadi Party Logo" class="w-full h-full object-contain filter drop-shadow-md">
           </div>
         </div>
 
@@ -342,7 +242,7 @@
               ✓
             </div>
             <div class="overflow-hidden rounded-xl border border-slate-200 w-28 h-16 shrink-0">
-              <img src="./Solution/step 1.png" alt="Step 1 Voter Setup" class="w-full h-full object-cover">
+              <img src="/Solution/step 1.png" alt="Step 1 Voter Setup" class="w-full h-full object-cover">
             </div>
             <div class="text-[10px] font-bold text-slate-800 leading-tight">
               Booth Voter Registry
@@ -362,7 +262,7 @@
               </div>
             </div>
             <div class="overflow-hidden rounded-xl border border-slate-200 w-48 h-20">
-              <img src="./Solution/step 2.png" alt="Step 2 Margin Analysis" class="w-full h-full object-cover">
+              <img src="/Solution/step 2.png" alt="Step 2 Margin Analysis" class="w-full h-full object-cover">
             </div>
             <div class="bg-slate-50 p-2 rounded-xl border border-slate-200 text-[10px]">
               <div class="font-bold text-slate-800">Today's Margin Analysis</div>
@@ -392,7 +292,7 @@
 
             <!-- Task Item 2 with Image -->
             <div class="overflow-hidden rounded-xl border border-slate-200 h-14">
-              <img src="./Solution/step 4.png" alt="Step 4 Field Surveying" class="w-full h-full object-cover">
+              <img src="/Solution/step 4.png" alt="Step 4 Field Surveying" class="w-full h-full object-cover">
             </div>
           </div>
         </div>
@@ -405,7 +305,7 @@
               <span class="text-[10px] bg-blue-50 text-blue-600 font-bold px-2 py-0.5 rounded">HQ Sync</span>
             </div>
             <div class="overflow-hidden rounded-xl border border-slate-200 h-20">
-              <img src="./Solution/step 5.png" alt="Step 5 Leadership Command" class="w-full h-full object-cover">
+              <img src="/Solution/step 5.png" alt="Step 5 Leadership Command" class="w-full h-full object-cover">
             </div>
             <div class="flex items-center gap-2 pt-1">
               <div class="w-6 h-6 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold text-[10px]">SP</div>
@@ -621,7 +521,7 @@
           
           <!-- Column 1: PURPOSE -->
           <div class="accordion-col">
-            <img src="./imp/PURPOSE.jpeg" alt="Purpose Background" class="accordion-bg">
+            <img src="/imp/PURPOSE.jpeg" alt="Purpose Background" class="accordion-bg">
             <div class="accordion-overlay-gradient"></div>
             
             <div class="accordion-header-collapsed">
@@ -639,7 +539,7 @@
 
           <!-- Column 2: PROMISE -->
           <div class="accordion-col">
-            <img src="./imp/PROMISE.jpeg" alt="Promise Background" class="accordion-bg">
+            <img src="/imp/PROMISE.jpeg" alt="Promise Background" class="accordion-bg">
             <div class="accordion-overlay-gradient"></div>
             
             <div class="accordion-header-collapsed">
@@ -664,7 +564,7 @@
 
           <!-- Column 3: MISSION -->
           <div class="accordion-col">
-            <img src="./imp/misson.jpeg" alt="Mission Background" class="accordion-bg">
+            <img src="/imp/misson.jpeg" alt="Mission Background" class="accordion-bg">
             <div class="accordion-overlay-gradient"></div>
             
             <div class="accordion-header-collapsed">
@@ -682,7 +582,7 @@
 
           <!-- Column 4: VALUES -->
           <div class="accordion-col">
-            <img src="./imp/VALUES.jpeg" alt="Values Background" class="accordion-bg">
+            <img src="/imp/VALUES.jpeg" alt="Values Background" class="accordion-bg">
             <div class="accordion-overlay-gradient"></div>
             
             <div class="accordion-header-collapsed">
@@ -856,7 +756,7 @@
             
             <!-- Direct Map Image Container -->
             <div class="relative w-full h-full flex flex-col items-center justify-center cursor-pointer group my-auto" onclick="openImageModal(document.getElementById('hist-map-img').src)">
-              <img id="hist-map-img" src="./Historical Election Data/2022.png" alt="UP Election Map" class="w-full h-[360px] sm:h-[420px] lg:h-[480px] object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-300">
+              <img id="hist-map-img" src="/Historical Election Data/2022.png" alt="UP Election Map" class="w-full h-[360px] sm:h-[420px] lg:h-[480px] object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-300">
               <span class="absolute bottom-3 right-3 text-xs text-slate-700 font-bold flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-200 shadow-md group-hover:bg-white transition-all">
                 <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-[#2864dc]"></i> Enlarge Map
               </span>
@@ -1086,7 +986,7 @@
                 </div>
 
                 <div class="rounded-2xl overflow-hidden border border-white/30 bg-slate-950 shadow-inner">
-                  <img src="./vote-swing/booth  data .png" alt="Booth Vote Margin Data Dashboard" class="w-full h-56 object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                  <img src="/vote-swing/booth  data .png" alt="Booth Vote Margin Data Dashboard" class="w-full h-56 object-cover object-top group-hover:scale-105 transition-transform duration-300">
                 </div>
 
                 <div class="grid grid-cols-2 gap-3 pt-1 text-center font-mono">
@@ -1114,7 +1014,7 @@
                 </div>
 
                 <div class="rounded-2xl overflow-hidden border border-white/30 bg-slate-950 shadow-inner">
-                  <img src="./vote-swing/booth 2.png" alt="Booth Vote Swing Tracking Dashboard" class="w-full h-56 object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                  <img src="/vote-swing/booth 2.png" alt="Booth Vote Swing Tracking Dashboard" class="w-full h-56 object-cover object-top group-hover:scale-105 transition-transform duration-300">
                 </div>
 
                 <div class="grid grid-cols-2 gap-3 pt-1 text-center font-mono">
@@ -1312,7 +1212,7 @@
 
             <!-- Real Solution Screenshot Integration (public/Solution/step 1.png) -->
             <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer group" onclick="openImageModal('/Solution/step 1.png')">
-              <img src="./Solution/step 1.png" alt="Booth Solution Setup Dashboard" class="w-full h-40 object-cover object-top group-hover:scale-105 transition-transform duration-300">
+              <img src="/Solution/step 1.png" alt="Booth Solution Setup Dashboard" class="w-full h-40 object-cover object-top group-hover:scale-105 transition-transform duration-300">
               <div class="bg-white px-3 py-1.5 text-[11px] font-mono text-slate-600 flex items-center justify-between border-t border-slate-200">
                 <span>Step 1: Centralized Booth Voter Data & Setup</span>
                 <span class="text-rose-600 font-bold flex items-center gap-1"><i data-lucide="maximize-2" class="w-3 h-3"></i> View Details</span>
@@ -1338,7 +1238,7 @@
 
                 <!-- Solution Image Preview for Historical Election Comparison (step 2.png) -->
                 <div class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer group" onclick="openImageModal('/Solution/step 2.png')">
-                  <img src="./Solution/step 2.png" alt="Party Wise Historical Comparison Map" class="w-full h-32 object-cover object-top group-hover:scale-105 transition-transform">
+                  <img src="/Solution/step 2.png" alt="Party Wise Historical Comparison Map" class="w-full h-32 object-cover object-top group-hover:scale-105 transition-transform">
                 </div>
 
                 <div class="space-y-2 text-xs">
@@ -1364,7 +1264,7 @@
 
                 <!-- Solution Image Preview for Live Ground Activity (step 3.png) -->
                 <div class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer group" onclick="openImageModal('/Solution/step 3.png')">
-                  <img src="./Solution/step 3.png" alt="Active Participants Real-time Map" class="w-full h-32 object-cover object-top group-hover:scale-105 transition-transform">
+                  <img src="/Solution/step 3.png" alt="Active Participants Real-time Map" class="w-full h-32 object-cover object-top group-hover:scale-105 transition-transform">
                 </div>
 
                 <div class="space-y-2 text-xs">
@@ -1517,7 +1417,7 @@
                 
                 <!-- Real Screenshot 1 (6).png -->
                 <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer group" onclick="openImageModal('/1 (6).png')">
-                  <img src="./1 (6).png" alt="Adhyaksh Command Portal Status" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
+                  <img src="/1 (6).png" alt="Adhyaksh Command Portal Status" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
                 </div>
               </div>
 
@@ -1726,7 +1626,7 @@
 
             <!-- Screenshot 1 (8).png -->
             <div class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer group" onclick="openImageModal('/1 (8).png')">
-              <img src="./1 (8).png" alt="Leadership Membership & Communication Dashboard" class="w-full h-56 object-cover object-top group-hover:scale-[1.01] transition-transform">
+              <img src="/1 (8).png" alt="Leadership Membership & Communication Dashboard" class="w-full h-56 object-cover object-top group-hover:scale-[1.01] transition-transform">
             </div>
           </div>
 
@@ -1743,7 +1643,7 @@
 
             <div class="pt-4">
               <a href="https://catalyst.itlcindia.com/" target="_blank" rel="noopener noreferrer" class="btn-pill-blue px-10 py-4 text-base sm:text-lg font-bold group">
-                <img src="./sp_logo.png" alt="SP Logo" class="w-8 h-6 object-contain rounded bg-white p-0.5">
+                <img src="/sp_logo.png" alt="SP Logo" class="w-8 h-6 object-contain rounded bg-white p-0.5">
                 <span>Login / Request Demo</span>
                 <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
               </a>
@@ -1832,7 +1732,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center">
         <div class="h-10 w-auto rounded-lg overflow-hidden border border-slate-200 shadow-sm flex items-center bg-white p-0.5">
-          <img src="./sp_logo.png" alt="Samajwadi Party Official Logo" class="h-full w-auto object-contain rounded">
+          <img src="/sp_logo.png" alt="Samajwadi Party Official Logo" class="h-full w-auto object-contain rounded">
         </div>
       </div>
 
@@ -1851,6 +1751,6 @@
     </div>
   </footer>
 
-  <script src="./main.js"></script>
+  <script type="module" src="/main.js"></script>
 </body>
 </html>

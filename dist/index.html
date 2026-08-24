@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samajwadi Party Field Intelligence Platform</title>
+  <meta name="description" content="One connected field intelligence platform connecting leadership, organizational teams, field workers, booth-level data, surveys, tasks, and reports in real time.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#F8FAFC',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Noto Sans Devanagari', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Outfit:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script type="module" crossorigin src="/assets/index-S-hLirYf.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DSvu_N_V.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-rose-600 selection:text-white overflow-x-hidden">
+
+  <!-- ===================================================================
+       BEGIN: SAMAJWADI PARTY INITIAL LOADING SCREEN (RESPONSIVE PERFECT FIT)
+       =================================================================== -->
+  <div id="splashScreen" class="fixed inset-0 z-50 loading-animation-section bg-sp-gradient h-screen w-screen flex flex-col justify-between items-center text-white font-sans overflow-hidden transition-all duration-700 px-4 py-3 sm:py-4">
+    
+    <!-- HEADER PORTRAITS (Shraddheya Netaji & Digital Survey Tag & Shri Akhilesh Yadav) -->
+    <header class="w-full flex justify-between items-center max-w-5xl px-2 sm:px-6 md:px-8 mt-2">
+      
+      <!-- Mulayam Singh Yadav ji Portrait -->
+      <div class="flex flex-col items-center animate-slide-in-left">
+        <div class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 sm:border-4 border-white portrait-glow bg-white shadow-2xl">
+          <img alt="Mulayam Singh Yadav" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbyhgp4l3ty0l9EHs82HHOOvO3T095skpEzidZ1X0SJWVaJJ1XmtVHcs-anhKXNl7DVk-pdFl3ETULWYXmpVXWeabO6MBYAAX_sN8auymuO1unfM_tDWIoUayRQ3nl-wYqCrFaLZQx_04CBRYSR84r_RGJIzZgROXWxoBAyoP9-MbLf-qI6sTQTtdRUqdLF0bPX0E_diLTBwVOxZuqL8Lo2_EB_qjBKluuzPbRI7jubcz9JS_DPZffcO0Ofc-SZAE7vQ"/>
+        </div>
+        <p class="mt-1 text-xs sm:text-sm font-bold tracking-wider drop-shadow-md text-center">Shraddheya Netaji</p>
+      </div>
+
+      <!-- TOP SIDE DIGITAL ELECTION SURVEY BADGE -->
+      <div class="inline-flex items-center space-x-1.5 sm:space-x-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-white/20 border border-white/40 text-[11px] sm:text-xs md:text-sm font-bold text-yellow-300 shadow-lg backdrop-blur-md">
+        <span>🗳️</span>
+        <span>Digital Election Survey | 2026–2027</span>
+      </div>
+
+      <!-- Akhilesh Yadav ji Portrait -->
+      <div class="flex flex-col items-center animate-slide-in-right">
+        <div class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 sm:border-4 border-white portrait-glow bg-white shadow-2xl">
+          <img alt="Akhilesh Yadav" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi1N7iug7bGxxyVhKK7rs1yMhfGCXdz9GjrKUNwNqIU5KiwkuUZcohvixKqsgrZiS1AhY77qDx7Ns6Z1E75D1cZu5CTlsBcjUVhJk0ZQAUv6RrsI0nIlUw9aiBK-rBJCgqrJF0okWJjrTojXRQBMEHL09OM_gg9vLpmRWypXcgc2_yx-6hNJTrPVShCo8UxjkbKQ8R92dE-IFi-vIqvKMBdRq6bYe6TE-0J2x0ZysC9gev0vQ4I0X3t4UxoSVSXjqX7g"/>
+        </div>
+        <p class="mt-1 text-xs sm:text-sm font-bold tracking-wider drop-shadow-md text-center">Shri Akhilesh Yadav</p>
+      </div>
+
+    </header>
+
+    <!-- MAIN ANIMATION CENTER (SP CAMPAIGN VIDEO CYCLE RIDING DIRECTLY ON 0%-100% PROGRESS BAR LINE) -->
+    <main class="flex-grow flex flex-col items-center justify-center w-full max-w-2xl my-auto py-2">
+      
+      <!-- Progress Bar Track Container with Cycle Riding On Line (Lowered Position) -->
+      <div class="w-72 sm:w-96 md:w-[480px] relative mt-16 sm:mt-20 mb-6 sm:mb-8">
+        
+        <!-- Bicycle Riding Container (Mega Size: Moves 0% to 100% along line) -->
+        <div id="loadingCycleContainer" class="absolute -top-24 sm:-top-32 md:-top-36 left-0 -translate-x-1/2 transition-all duration-300 pointer-events-none flex flex-col items-center z-10">
+          <div class="w-56 h-40 sm:w-72 sm:h-48 md:w-80 md:h-56 relative flex items-center justify-center overflow-hidden [clip-path:inset(0_0_18%_0)]">
+            
+            <!-- Video Source for Real-Time Background Removal Engine (0812.mp4) -->
+            <video id="cycleVideoElement" autoplay loop muted playsinline class="hidden">
+              <source src="/0812.mp4" type="video/mp4"/>
+              <source src="0812.mp4" type="video/mp4"/>
+              <source src="/v1.mp4" type="video/mp4"/>
+            </video>
+
+            <!-- Real-Time Transparent Canvas (Renders ONLY pure white cycle with 100% transparent background) -->
+            <canvas id="cycleCanvasElement" class="w-full h-full object-contain filter drop-shadow-[0_4px_10px_rgba(255,255,255,0.7)]"></canvas>
+
+            <!-- Razor Sharp Pure White Vector Bicycle Fallback -->
+            <svg id="cycleSvgFallback" class="w-full h-full object-contain hidden filter drop-shadow-[0_4px_8px_rgba(255,255,255,0.9)]" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Rear Wheel -->
+              <circle cx="25" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
+              <circle cx="25" cy="42" r="2.5" fill="#FFFFFF"/>
+              <!-- Front Wheel -->
+              <circle cx="75" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
+              <circle cx="75" cy="42" r="2.5" fill="#FFFFFF"/>
+              <!-- Frame & Chain -->
+              <path d="M25 42 L42 42 L55 24 L25 42 Z" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" fill="none"/>
+              <path d="M42 42 L38 20 L46 20" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Handlebar & Front Fork -->
+              <path d="M75 42 L64 16 L72 16 M68 22 L55 24" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Seat -->
+              <path d="M33 20 L43 20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+              <!-- Pedal Crank -->
+              <circle cx="42" cy="42" r="4" fill="#FFFFFF"/>
+            </svg>
+
+          </div>
+        </div>
+
+        <!-- Real Loading Progress Track Line -->
+        <div class="w-full bg-black/50 h-2.5 sm:h-3 rounded-full overflow-hidden border border-white/40 relative shadow-2xl backdrop-blur-sm">
+          <div id="loadingProgressBar" class="bg-gradient-to-r from-yellow-300 via-white to-emerald-400 h-full w-0 transition-all duration-300 shadow-lg"></div>
+        </div>
+
+      </div>
+
+      <!-- Percentage Counter -->
+      <span id="loadingPercent" class="text-xs sm:text-sm font-black tracking-widest mt-1 text-yellow-300 drop-shadow-md">0%</span>
+    </main>
+
+    <!-- Dedicated Dead Center Zoom-In Cycle Overlay (Emerges 100% PURE WHITE from Dead Center of Screen) -->
+    <div id="centerZoomCycleModal" class="fixed inset-0 z-50 pointer-events-none flex items-center justify-center hidden">
+      <div id="centerZoomCycleCard" class="w-72 h-52 sm:w-96 sm:h-72 md:w-[480px] md:h-80 relative flex items-center justify-center transform scale-50 opacity-0 transition-all duration-700 ease-out [clip-path:inset(0_0_18%_0)]">
+        
+        <video id="centerCycleVideoElement" autoplay loop muted playsinline class="hidden">
+          <source src="/0812.mp4" type="video/mp4"/>
+          <source src="0812.mp4" type="video/mp4"/>
+        </video>
+
+        <canvas id="centerCycleCanvasElement" class="w-full h-full object-contain filter drop-shadow-[0_0_60px_rgba(255,255,255,1)]"></canvas>
+
+      </div>
+    </div>
+
+    <!-- FOOTER TYPOGRAPHY & ENTER PORTAL BUTTON -->
+    <!-- FOOTER TYPOGRAPHY -->
+    <footer class="mb-2 sm:mb-4 text-center pb-2 flex flex-col items-center space-y-1.5 shrink-0">
+      <h1 class="text-xl sm:text-3xl md:text-4xl font-black tracking-wider uppercase drop-shadow-2xl text-white">
+        Samajwadi Party
+      </h1>
+    </footer>
+  </div>
+
+  <!-- Background Grid & Light Effects -->
+  <div class="fixed inset-0 bg-grid-pattern opacity-60 pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-rose-500/10 blur-[140px] rounded-full pointer-events-none z-0"></div>
+  <div class="fixed bottom-0 right-0 w-[600px] h-[600px] bg-cyan-500/10 blur-[160px] rounded-full pointer-events-none z-0"></div>
+
+  <!-- NAVIGATION HEADER WITH CLEAN SAMAJWADI PARTY LOGO IMAGE ONLY -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-white/85 border-b border-slate-200/80 shadow-sm transition-all duration-300 h-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+      <a href="#" class="flex items-center group">
+        <!-- Standalone Samajwadi Party Logo Image -->
+        <div class="h-14 w-auto rounded-xl overflow-hidden border border-slate-200/80 shadow-md group-hover:scale-105 transition-transform flex items-center bg-white p-0.5">
+          <img src="/sp_logo.png" alt="Samajwadi Party Logo" class="h-full w-auto object-contain rounded-lg">
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700">
+        <a href="#hero" class="hover:text-rose-600 transition-colors">Overview</a>
+        <a href="#problem" class="hover:text-rose-600 transition-colors">Problem</a>
+        <a href="#historical-elections" class="hover:text-rose-600 transition-colors text-red-600 font-bold">Historical Elections</a>
+        <a href="#solution" class="hover:text-rose-600 transition-colors">Hierarchy</a>
+        <a href="#booth-intelligence" class="hover:text-rose-600 transition-colors">Booth Intelligence</a>
+        <a href="#leadership" class="hover:text-rose-600 transition-colors">Leadership</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="flex items-center gap-4">
+        <a href="https://catalyst.itlcindia.com/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-red-600 via-rose-600 to-emerald-700 hover:from-red-700 hover:to-emerald-800 shadow-md shadow-red-600/20 hover:shadow-red-600/40 transition-all hover:scale-[1.02] flex items-center gap-2">
+          <i data-lucide="log-in" class="w-4 h-4"></i>
+          <span>Login</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="relative z-10">
+
+    <!-- 01 — HERO SECTION (FULL SCREEN DOT-GRID CANVAS WITH FLOATING CARDS DIRECTLY ON BACKGROUND) -->
+    <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex flex-col justify-center py-10 lg:py-16 bg-[#f8faec] hero-dot-grid overflow-hidden border-b border-slate-200">
+      
+      <!-- Ambient Glow in Background -->
+      <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-blue-500/10 via-red-500/10 to-emerald-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+      <!-- Outer Canvas Container (Directly on section background) -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        
+        <!-- TOP CENTER 3D FLOATING LOGO ICON -->
+        <div class="relative z-20 text-center mb-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-white border border-slate-200 shadow-xl p-3 transform hover:scale-110 transition-transform duration-300 group cursor-pointer" onclick="openImageModal('/sp_logo.png')">
+            <img src="/sp_logo.png" alt="Samajwadi Party Logo" class="w-full h-full object-contain filter drop-shadow-md">
+          </div>
+        </div>
+
+        <!-- CENTER HEADLINE & SUBTITLE -->
+        <div class="relative z-20 text-center max-w-3xl mx-auto space-y-4">
+          
+          <h1 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            Think, plan, and track<br>
+            <span class="bg-gradient-to-r from-red-600 via-rose-600 to-blue-600 bg-clip-text text-transparent">all in one place</span>
+          </h1>
+
+          <p class="text-xs sm:text-base text-slate-600 max-w-xl mx-auto font-medium leading-relaxed">
+            Efficiently manage your Samajwadi Party booth surveys, voter lists, field cadre tasks, and real-time election strategy.
+          </p>
+
+          <!-- Primary Blue Pill CTA Button -->
+          <div class="pt-3 flex flex-wrap items-center justify-center gap-4">
+            <a href="https://catalyst.itlcindia.com/" target="_blank" rel="noopener noreferrer" class="btn-pill-blue px-8 py-3.5 text-xs sm:text-sm font-black">
+              <span>Login / Request Demo</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- 4 FLOATING TILTED WIDGET CARDS (Floating directly on the background canvas) -->
+        
+        <!-- FLOATING CARD 1: TOP-LEFT (Sticky Note style with step 1.png) -->
+        <div class="hidden lg:block absolute top-0 left-0 xl:left-4 max-w-xs hero-tilt-tl cursor-pointer z-30" onclick="openImageModal('/Solution/step 1.png')">
+          <!-- Yellow Sticky Note -->
+          <div class="bg-yellow-200 text-slate-800 text-[11px] font-medium p-3.5 rounded-2xl shadow-lg border border-yellow-300 mb-3 relative font-sans leading-snug">
+            <div class="w-2.5 h-2.5 rounded-full bg-red-500 absolute -top-1.5 left-1/2 -translate-x-1/2 border border-white shadow"></div>
+            Take notes to keep track of crucial booth details, voter lists, and accomplish more tasks with ease.
+          </div>
+          <!-- Glass Card with step 1.png & Blue Checkmark Badge -->
+          <div class="bg-white/95 border border-slate-200 p-2.5 rounded-2xl shadow-xl backdrop-blur-md flex items-center gap-3">
+            <div class="w-8 h-8 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xs font-bold shrink-0 shadow-md">
+              ✓
+            </div>
+            <div class="overflow-hidden rounded-xl border border-slate-200 w-28 h-16 shrink-0">
+              <img src="/Solution/step 1.png" alt="Step 1 Voter Setup" class="w-full h-full object-cover">
+            </div>
+            <div class="text-[10px] font-bold text-slate-800 leading-tight">
+              Booth Voter Registry
+              <div class="text-rose-600 font-mono text-[9px] mt-0.5">1,74,351 Booths</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FLOATING CARD 2: TOP-RIGHT (Reminders Card with step 2.png & Clock Badge) -->
+        <div class="hidden lg:block absolute top-0 right-0 xl:right-4 max-w-xs hero-tilt-tr cursor-pointer z-30" onclick="openImageModal('/Solution/step 2.png')">
+          <div class="bg-white/95 border border-slate-200 p-3.5 rounded-3xl shadow-xl backdrop-blur-md space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900">Reminders</span>
+              <!-- Floating Stopwatch Icon -->
+              <div class="w-7 h-7 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 shadow-sm">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-xl border border-slate-200 w-48 h-20">
+              <img src="/Solution/step 2.png" alt="Step 2 Margin Analysis" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-slate-50 p-2 rounded-xl border border-slate-200 text-[10px]">
+              <div class="font-bold text-slate-800">Today's Margin Analysis</div>
+              <div class="text-slate-500 font-mono mt-0.5">⏱ 13:00 - 14:45</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FLOATING CARD 3: BOTTOM-LEFT (Today's Tasks Card with step 3.png & step 4.png) -->
+        <div class="hidden lg:block absolute bottom-12 left-0 xl:left-4 max-w-xs hero-tilt-bl cursor-pointer z-30" onclick="openImageModal('/Solution/step 3.png')">
+          <div class="bg-white/95 border border-slate-200 p-3.5 rounded-3xl shadow-xl backdrop-blur-md space-y-3 w-56">
+            <div class="text-xs font-bold text-slate-900 flex items-center justify-between">
+              <span>Today's tasks</span>
+              <span class="text-[10px] text-emerald-600 font-mono font-bold">Active</span>
+            </div>
+
+            <!-- Task Item 1 -->
+            <div class="space-y-1 text-[10px]">
+              <div class="flex justify-between text-slate-700 font-medium">
+                <span>Booth Cadre Survey</span>
+                <span class="font-mono text-blue-600 font-bold">60%</span>
+              </div>
+              <div class="w-full h-1.5 rounded-full bg-slate-100 overflow-hidden">
+                <div class="h-full bg-blue-600 rounded-full w-[60%]"></div>
+              </div>
+            </div>
+
+            <!-- Task Item 2 with Image -->
+            <div class="overflow-hidden rounded-xl border border-slate-200 h-14">
+              <img src="/Solution/step 4.png" alt="Step 4 Field Surveying" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- FLOATING CARD 4: BOTTOM-RIGHT (100+ Integrations Card with step 5.png) -->
+        <div class="hidden lg:block absolute bottom-12 right-0 xl:right-4 max-w-xs hero-tilt-br cursor-pointer z-30" onclick="openImageModal('/Solution/step 5.png')">
+          <div class="bg-white/95 border border-slate-200 p-3.5 rounded-3xl shadow-xl backdrop-blur-md space-y-2.5 w-60">
+            <div class="text-xs font-bold text-slate-900 flex items-center justify-between">
+              <span>75+ District Integrations</span>
+              <span class="text-[10px] bg-blue-50 text-blue-600 font-bold px-2 py-0.5 rounded">HQ Sync</span>
+            </div>
+            <div class="overflow-hidden rounded-xl border border-slate-200 h-20">
+              <img src="/Solution/step 5.png" alt="Step 5 Leadership Command" class="w-full h-full object-cover">
+            </div>
+            <div class="flex items-center gap-2 pt-1">
+              <div class="w-6 h-6 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold text-[10px]">SP</div>
+              <div class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-[10px]">AC</div>
+              <div class="w-6 h-6 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-[10px]">BT</div>
+              <span class="text-[10px] text-slate-500 font-mono font-bold ml-auto">+403 ACs</span>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02 — PROBLEM SECTION -->
+    <section id="problem" class="py-24 bg-white border-t border-b border-slate-200 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 pb-4 border-b border-slate-200">
+          <div class="max-w-xl">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
+              The Ground Reality Is Fragmented
+            </h2>
+          </div>
+          <div class="max-w-lg lg:text-right">
+            <p class="text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
+              Leadership possesses vast data, but it remains fragmented and distributed across isolated silos.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Problem Cards Grid (Samajwadi Red Cards) -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Problem 01 -->
+          <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 border border-red-500 text-white p-6 rounded-2xl shadow-xl shadow-red-900/10 hover:shadow-red-600/30 transition-all hover:-translate-y-1 group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-extrabold font-mono text-yellow-300">01</span>
+              <div class="w-10 h-10 rounded-xl bg-white/20 border border-white/30 text-yellow-300 flex items-center justify-center backdrop-blur-sm">
+                <i data-lucide="layers" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <h3 class="text-base font-black text-white mb-2">Fragmented Data</h3>
+            <p class="text-sm text-red-100 leading-relaxed font-medium">
+              Election, booth, worker, and survey data are locked in isolated spreadsheets and disconnected sources.
+            </p>
+          </div>
+
+          <!-- Problem 02 -->
+          <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 border border-red-500 text-white p-6 rounded-2xl shadow-xl shadow-red-900/10 hover:shadow-red-600/30 transition-all hover:-translate-y-1 group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-extrabold font-mono text-yellow-300">02</span>
+              <div class="w-10 h-10 rounded-xl bg-white/20 border border-white/30 text-yellow-300 flex items-center justify-center backdrop-blur-sm">
+                <i data-lucide="eye-off" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <h3 class="text-base font-black text-white mb-2">Limited Visibility</h3>
+            <p class="text-sm text-red-100 leading-relaxed font-medium">
+              Lack of immediate 360° ground visibility and real-time operational updates from the field.
+            </p>
+          </div>
+
+          <!-- Problem 03 -->
+          <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 border border-red-500 text-white p-6 rounded-2xl shadow-xl shadow-red-900/10 hover:shadow-red-600/30 transition-all hover:-translate-y-1 group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-extrabold font-mono text-yellow-300">03</span>
+              <div class="w-10 h-10 rounded-xl bg-white/20 border border-white/30 text-yellow-300 flex items-center justify-center backdrop-blur-sm">
+                <i data-lucide="file-spreadsheets" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <h3 class="text-base font-black text-white mb-2">Manual Reporting</h3>
+            <p class="text-sm text-red-100 leading-relaxed font-medium">
+              Field reports are manually routed across hierarchical levels — causing delays and reporting errors.
+            </p>
+          </div>
+
+          <!-- Problem 04 -->
+          <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 border border-red-500 text-white p-6 rounded-2xl shadow-xl shadow-red-900/10 hover:shadow-red-600/30 transition-all hover:-translate-y-1 group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-extrabold font-mono text-yellow-300">04</span>
+              <div class="w-10 h-10 rounded-xl bg-white/20 border border-white/30 text-yellow-300 flex items-center justify-center backdrop-blur-sm">
+                <i data-lucide="history" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <h3 class="text-base font-black text-white mb-2">Historical Data Gap</h3>
+            <p class="text-sm text-red-100 leading-relaxed font-medium">
+              Previous election performance is disconnected from real-time ground realities, creating insight gaps.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Bottom Statement Banner -->
+        <div class="mt-16 text-center">
+          <div class="inline-block p-8 rounded-3xl bg-gradient-to-r from-rose-50 via-rose-100/70 to-rose-50 border border-rose-200 max-w-4xl w-full shadow-md relative overflow-hidden group">
+            <p class="text-xs font-mono text-rose-600 uppercase tracking-widest mb-2 font-bold">THE CORE CHALLENGE</p>
+            <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+              "Too Much Data. Too Little Visibility."
+            </h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- POSITION 3: NEW 5 STRATEGIC PILLARS OF SOLUTION SECTION (CLEAN WHITE THEME) -->
+    <section id="core-solution" class="py-24 relative overflow-hidden bg-white text-slate-900 border-t border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
+        
+        <!-- Header (Left Heading, Right Description) -->
+        <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 pb-6 border-b border-slate-200">
+          <div class="max-w-2xl space-y-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-50 text-rose-600 border border-rose-200">
+              <span>⚡</span> 5 CORE STRATEGIC PILLARS
+            </div>
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              5 Pillars of Field Intelligence & Victory Strategy
+            </h2>
+          </div>
+          <div class="max-w-lg lg:text-right">
+            <p class="text-slate-600 text-sm sm:text-base font-medium leading-relaxed">
+              Connecting micro booth data, historical win/loss %, AI forecasting, verified field execution, and advance leadership command into one undefeated ecosystem.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5 Interactive Pillar Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
+          
+          <!-- Pillar 1 -->
+          <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl space-y-4 hover:border-rose-500 hover:shadow-md transition-all hover:-translate-y-1 group shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-rose-600">PILLAR 01</span>
+              <div class="w-9 h-9 rounded-xl bg-rose-100 border border-rose-200 text-rose-600 flex items-center justify-center font-black text-sm">
+                📌
+              </div>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-rose-600 transition-colors">Booth-Level Data</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Micro mapping across 1,74,351 booths — voter rolls, caste demographics, & sector worker profiles.
+            </p>
+            <div class="pt-2 text-[10px] font-mono text-rose-600 font-bold">1,74,351 BOOTHS COVERED</div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl space-y-4 hover:border-amber-500 hover:shadow-md transition-all hover:-translate-y-1 group shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-amber-600">PILLAR 02</span>
+              <div class="w-9 h-9 rounded-xl bg-amber-100 border border-amber-200 text-amber-600 flex items-center justify-center font-black text-sm">
+                📊
+              </div>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Historical Win/Loss %</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Seat-by-seat victory margins, loss margins, & vote swing % trends from 2007, 2012, 2017 & 2022.
+            </p>
+            <div class="pt-2 text-[10px] font-mono text-amber-600 font-bold">4 ELECTION CYCLES</div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl space-y-4 hover:border-emerald-500 hover:shadow-md transition-all hover:-translate-y-1 group shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-emerald-600">PILLAR 03</span>
+              <div class="w-9 h-9 rounded-xl bg-emerald-100 border border-emerald-200 text-emerald-600 flex items-center justify-center font-black text-sm">
+                🛣️
+              </div>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">Working Right Path</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Direct Adhyaksh Tasking ➔ Karyakarta Mobile App ➔ Flag/Survey Execution ➔ GPS Photo Proof.
+            </p>
+            <div class="pt-2 text-[10px] font-mono text-emerald-600 font-bold">100% VERIFIED WORKFLOW</div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl space-y-4 hover:border-blue-500 hover:shadow-md transition-all hover:-translate-y-1 group shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-blue-600">PILLAR 04</span>
+              <div class="w-9 h-9 rounded-xl bg-blue-100 border border-blue-200 text-blue-600 flex items-center justify-center font-black text-sm">
+                🔮
+              </div>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Future Strategy</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              AI Red/Yellow/Green zone booth classification, target turnout calculation, & early victory warnings.
+            </p>
+            <div class="pt-2 text-[10px] font-mono text-blue-600 font-bold">AI PREDICTIVE FORECASTING</div>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl space-y-4 hover:border-indigo-500 hover:shadow-md transition-all hover:-translate-y-1 group shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-indigo-600">PILLAR 05</span>
+              <div class="w-9 h-9 rounded-xl bg-indigo-100 border border-indigo-200 text-indigo-600 flex items-center justify-center font-black text-sm">
+                🏛️
+              </div>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Advance Leadership</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              360° Command Center empowering top leadership with real-time 2-way Adhyaksh Query Resolution.
+            </p>
+            <div class="pt-2 text-[10px] font-mono text-indigo-600 font-bold">REAL-TIME COMMAND HQ</div>
+          </div>
+
+      </div>
+    </section>
+
+    <!-- POSITION 4: INTERACTIVE PURPOSE, PROMISE, MISSION & VALUES SPLIT SLIDER SECTION (BORDERLESS FULL-WIDTH) -->
+    <section id="purpose-mission" class="py-0 relative overflow-hidden bg-slate-950 text-white">
+      <!-- 4-Column Interactive Accordion Split Wrapper -->
+      <div class="accordion-split-wrapper">
+          
+          <!-- Column 1: PURPOSE -->
+          <div class="accordion-col">
+            <img src="/imp/PURPOSE.jpeg" alt="Purpose Background" class="accordion-bg">
+            <div class="accordion-overlay-gradient"></div>
+            
+            <div class="accordion-header-collapsed">
+              <span class="accordion-label">PURPOSE</span>
+            </div>
+            
+            <div class="accordion-body-expanded space-y-4">
+              <span class="text-xs font-mono font-extrabold text-rose-400 tracking-widest uppercase">OUR CORE PURPOSE</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">PURPOSE</h3>
+              <p class="text-sm sm:text-base text-slate-200 font-medium leading-relaxed max-w-md">
+                We understand your political challenges, solve them intelligently, save your time, and help you scale at speed.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: PROMISE -->
+          <div class="accordion-col">
+            <img src="/imp/PROMISE.jpeg" alt="Promise Background" class="accordion-bg">
+            <div class="accordion-overlay-gradient"></div>
+            
+            <div class="accordion-header-collapsed">
+              <span class="accordion-label">PROMISE</span>
+            </div>
+            
+            <div class="accordion-body-expanded space-y-4">
+              <span class="text-xs font-mono font-extrabold text-amber-400 tracking-widest uppercase">OUR COMMITMENT</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">PROMISE</h3>
+              <h4 class="text-base sm:text-lg font-bold text-rose-400 leading-snug">Understand Better. Decide Smarter. Act Faster. Scale Further.</h4>
+              <p class="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed max-w-md">
+                Deliver high-speed booth mapping, direct Adhyaksh-to-Karyakarta mobile tasking, and verified real-time ground intelligence.
+              </p>
+              <div class="pt-2">
+                <a href="https://catalyst.itlcindia.com/" target="_blank" rel="noopener noreferrer" class="btn-pill-blue px-6 py-2.5 text-xs font-bold uppercase tracking-wider">
+                  <span>KNOW MORE</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: MISSION -->
+          <div class="accordion-col">
+            <img src="/imp/misson.jpeg" alt="Mission Background" class="accordion-bg">
+            <div class="accordion-overlay-gradient"></div>
+            
+            <div class="accordion-header-collapsed">
+              <span class="accordion-label">MISSION</span>
+            </div>
+            
+            <div class="accordion-body-expanded space-y-4">
+              <span class="text-xs font-mono font-extrabold text-blue-400 tracking-widest uppercase">OUR STRATEGIC GOAL</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">MISSION</h3>
+              <p class="text-sm sm:text-base text-slate-200 font-medium leading-relaxed max-w-md">
+                Understand every constituency, identify key political challenges, optimize campaign strategy, save valuable time, and enable smarter decision-making at scale.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 4: VALUES -->
+          <div class="accordion-col">
+            <img src="/imp/VALUES.jpeg" alt="Values Background" class="accordion-bg">
+            <div class="accordion-overlay-gradient"></div>
+            
+            <div class="accordion-header-collapsed">
+              <span class="accordion-label">VALUES</span>
+            </div>
+            
+            <div class="accordion-body-expanded space-y-3">
+              <span class="text-xs font-mono font-extrabold text-emerald-400 tracking-widest uppercase">CORE VALUES</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">VALUES</h3>
+              <ul class="space-y-1.5 text-xs text-slate-200 font-medium max-h-[320px] overflow-y-auto pr-1">
+                <li class="flex items-start gap-1.5">
+                  <span class="text-rose-500 font-bold text-sm leading-none">•</span>
+                  <div><strong class="text-white">People First:</strong> People, their needs, and aspirations at the center.</div>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-rose-500 font-bold text-sm leading-none">•</span>
+                  <div><strong class="text-white">Data Driven:</strong> Decisions powered by real ground-level data.</div>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-rose-500 font-bold text-sm leading-none">•</span>
+                  <div><strong class="text-white">Smart Technology:</strong> AI and technology for faster, smarter execution.</div>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-rose-500 font-bold text-sm leading-none">•</span>
+                  <div><strong class="text-white">Transparency:</strong> Clear, accountable, and responsible actions.</div>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-rose-500 font-bold text-sm leading-none">•</span>
+                  <div><strong class="text-white">Speed:</strong> Fast decisions, faster execution.</div>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-rose-500 font-bold text-sm leading-none">•</span>
+                  <div><strong class="text-white">Ground Reality:</strong> Strategy based on real constituency insights.</div>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-rose-500 font-bold text-sm leading-none">•</span>
+                  <div><strong class="text-white">Teamwork:</strong> Strong coordination across every level.</div>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-rose-500 font-bold text-sm leading-none">•</span>
+                  <div><strong class="text-white">Scale:</strong> Systems built for impact across Uttar Pradesh.</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+    </section>
+
+    <!-- NEW SECTION: SAMAJWADI LEADERSHIP VISION (NETAJI & AKHILESH YADAV) -->
+    <section id="leadership-vision" class="py-20 relative overflow-hidden bg-gradient-to-r from-[#0b1329] via-[#1a060a] to-[#3a0007] text-white border-t border-b border-rose-900/40">
+      <!-- Background Decorative Grid Pattern & Ambient Glows -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none"></div>
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-rose-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- LEFT SIDE: Text Content & CTA -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/20 text-rose-300 border border-rose-500/30">
+              <i data-lucide="mic" class="w-4 h-4 text-rose-400"></i>
+              <span>LEADERSHIP VISION</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+              Socialist Legacy & <br>
+              <span class="bg-gradient-to-r from-rose-400 via-amber-300 to-emerald-400 bg-clip-text text-transparent">Digital Victory Strategy</span>
+            </h2>
+            
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-medium max-w-xl">
+              Grounded in the socialist principles of Shraddheya Netaji Mulayam Singh Yadav Ji and powered by the modern digital vision of Shri Akhilesh Yadav Ji — empowering 1,74,351 booth karyakartas with real-time field intelligence.
+            </p>
+
+            <div class="pt-2">
+              <a href="https://catalyst.itlcindia.com/" target="_blank" rel="noopener noreferrer" class="btn-pill-blue px-7 py-3 text-xs sm:text-sm font-bold uppercase tracking-wider inline-flex items-center gap-3">
+                <i data-lucide="play-circle" class="w-5 h-5"></i>
+                <span>EXPLORE LEADERSHIP VISION</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: 2 Leader Portrait Cards with Angled Label Tags -->
+          <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6 items-end">
+            
+            <!-- Leader 1: Netaji Mulayam Singh Yadav Ji -->
+            <div class="relative group rounded-3xl overflow-hidden bg-slate-900/60 border border-white/10 p-4 backdrop-blur-md shadow-2xl hover:border-rose-500/50 transition-all">
+              <div class="h-64 sm:h-72 w-full rounded-2xl overflow-hidden bg-gradient-to-b from-rose-950/40 to-slate-950 flex items-center justify-center relative">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbyhgp4l3ty0l9EHs82HHOOvO3T095skpEzidZ1X0SJWVaJJ1XmtVHcs-anhKXNl7DVk-pdFl3ETULWYXmpVXWeabO6MBYAAX_sN8auymuO1unfM_tDWIoUayRQ3nl-wYqCrFaLZQx_04CBRYSR84r_RGJIzZgROXWxoBAyoP9-MbLf-qI6sTQTtdRUqdLF0bPX0E_diLTBwVOxZuqL8Lo2_EB_qjBKluuzPbRI7jubcz9JS_DPZffcO0Ofc-SZAE7vQ" alt="Netaji Mulayam Singh Yadav" class="w-full h-full object-cover object-top filter brightness-95 group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+              </div>
+
+              <!-- Angled Label Tag (Matching Reference Image) -->
+              <div class="mt-3 bg-[#f5efe6] text-slate-900 p-3 rounded-xl shadow-lg border-l-4 border-rose-600 [clip-path:polygon(0_0,100%_0,95%_100%,0_100%)]">
+                <h3 class="text-xs sm:text-sm font-black tracking-wider uppercase text-slate-900">SHRADDHEYA NETAJI MULAYAM SINGH YADAV</h3>
+                <p class="text-[10px] sm:text-xs text-slate-600 font-semibold mt-0.5 leading-tight">Founder, Samajwadi Party & Former Defence Minister of India</p>
+              </div>
+            </div>
+
+            <!-- Leader 2: Shri Akhilesh Yadav Ji -->
+            <div class="relative group rounded-3xl overflow-hidden bg-slate-900/60 border border-white/10 p-4 backdrop-blur-md shadow-2xl hover:border-rose-500/50 transition-all">
+              <div class="h-64 sm:h-72 w-full rounded-2xl overflow-hidden bg-gradient-to-b from-rose-950/40 to-slate-950 flex items-center justify-center relative">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi1N7iug7bGxxyVhKK7rs1yMhfGCXdz9GjrKUNwNqIU5KiwkuUZcohvixKqsgrZiS1AhY77qDx7Ns6Z1E75D1cZu5CTlsBcjUVhJk0ZQAUv6RrsI0nIlUw9aiBK-rBJCgqrJF0okWJjrTojXRQBMEHL09OM_gg9vLpmRWypXcgc2_yx-6hNJTrPVShCo8UxjkbKQ8R92dE-IFi-vIqvKMBdRq6bYe6TE-0J2x0ZysC9gev0vQ4I0X3t4UxoSVSXjqX7g" alt="Shri Akhilesh Yadav" class="w-full h-full object-cover object-top filter brightness-95 group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+              </div>
+
+              <!-- Angled Label Tag (Matching Reference Image) -->
+              <div class="mt-3 bg-[#f5efe6] text-slate-900 p-3 rounded-xl shadow-lg border-l-4 border-rose-600 [clip-path:polygon(0_0,100%_0,95%_100%,0_100%)]">
+                <h3 class="text-xs sm:text-sm font-black tracking-wider uppercase text-slate-900">AKHILESH YADAV</h3>
+                <p class="text-[10px] sm:text-xs text-slate-600 font-semibold mt-0.5 leading-tight">National President, Samajwadi Party & Former Chief Minister of UP</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — HISTORICAL ELECTION MAPS & DATA SECTION (EXACT INTER TEMPLATE DESIGN) -->
+    <section id="historical-elections" class="py-20 relative overflow-hidden bg-[#f7f9fc] text-[#15213b] border-t border-b border-slate-200">
+      
+      <!-- Background Ambient Glows -->
+      <div class="absolute top-12 left-1/4 w-96 h-96 bg-cyan-300/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-rose-300/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
+
+        <!-- Hero Header Section (Left Heading, Right Description & Tabs Layout) -->
+        <div class="flex flex-col lg:flex-row items-start justify-between gap-6 pb-2 border-b border-slate-200/80">
+          
+          <!-- LEFT SIDE: Main Heading -->
+          <div class="space-y-3 max-w-xl">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-[#15213b] leading-tight">
+              UP Assembly Elections:<br>
+              <span class="bg-gradient-to-r from-[#2864dc] via-[#7b56df] via-[#e83b45] to-[#18a66a] bg-clip-text text-transparent">2007, 2012, 2017 & 2022</span> Maps
+            </h2>
+          </div>
+
+          <!-- RIGHT SIDE: Description & Year Selector Tabs -->
+          <div class="space-y-4 max-w-lg lg:text-right">
+            <p class="text-slate-500 text-sm sm:text-base leading-relaxed font-medium">
+              Comprehensive historical performance, map visualizations, seat tallies, and party-wise vote shares across 4 major election cycles.
+            </p>
+
+            <!-- Year Selection Tabs -->
+            <div class="tabs flex flex-wrap lg:justify-end gap-2.5 pt-1" id="year-tabs-container">
+              <button onclick="switchHistoricalYear('2022')" id="btn-year-2022" class="year-tab-btn tab active px-4 py-2 bg-[#2864dc] border border-[#2864dc] text-white rounded-xl font-bold text-xs md:text-sm shadow-md transition-transform hover:-translate-y-0.5">
+                📊 &nbsp; 2022 Elections
+              </button>
+              <button onclick="switchHistoricalYear('2017')" id="btn-year-2017" class="year-tab-btn tab px-4 py-2 bg-white border border-[#e5eaf2] text-[#5c6880] rounded-xl font-semibold text-xs md:text-sm hover:border-[#aac3f5] transition-transform hover:-translate-y-0.5">
+                ▣ &nbsp; 2017 Elections
+              </button>
+              <button onclick="switchHistoricalYear('2012')" id="btn-year-2012" class="year-tab-btn tab px-4 py-2 bg-white border border-[#e5eaf2] text-[#5c6880] rounded-xl font-semibold text-xs md:text-sm hover:border-[#aac3f5] transition-transform hover:-translate-y-0.5">
+                🏆 &nbsp; 2012 (SP Victory)
+              </button>
+              <button onclick="switchHistoricalYear('2007')" id="btn-year-2007" class="year-tab-btn tab px-4 py-2 bg-white border border-[#e5eaf2] text-[#5c6880] rounded-xl font-semibold text-xs md:text-sm hover:border-[#aac3f5] transition-transform hover:-translate-y-0.5">
+                ▤ &nbsp; 2007 Elections
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Main Grid Content -->
+        <div class="main-grid grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+
+          <!-- Left Column: Map Viewer Card (Pure Image Frame) -->
+          <div class="lg:col-span-6 card map-card bg-white border border-[#e5eaf2] rounded-2xl shadow-sm p-3 sm:p-4 flex flex-col justify-center items-center h-full overflow-hidden">
+            
+            <!-- Direct Map Image Container -->
+            <div class="relative w-full h-full flex flex-col items-center justify-center cursor-pointer group my-auto" onclick="openImageModal(document.getElementById('hist-map-img').src)">
+              <img id="hist-map-img" src="/Historical Election Data/2022.png" alt="UP Election Map" class="w-full h-[360px] sm:h-[420px] lg:h-[480px] object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-300">
+              <span class="absolute bottom-3 right-3 text-xs text-slate-700 font-bold flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-200 shadow-md group-hover:bg-white transition-all">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-[#2864dc]"></i> Enlarge Map
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Election Analysis & KPI Grid -->
+          <div class="lg:col-span-6 card analysis bg-white border border-[#e5eaf2] rounded-2xl shadow-sm p-5 sm:p-6 flex flex-col justify-between h-full space-y-4">
+            
+            <div>
+              <h2 id="hist-title" class="text-base sm:text-lg font-extrabold text-[#15213b] tracking-tight">2022 Uttar Pradesh Assembly Election</h2>
+              <p id="hist-desc" class="analysis-subtitle text-xs text-[#718096] mt-1.5 leading-relaxed font-medium">
+                Samajwadi Party secured 111 seats (Alliance 125) with 32.06% vote share — a massive +10.24% vote surge.
+              </p>
+            </div>
+
+            <!-- KPI Grid (4 Cards) -->
+            <div class="kpi-grid grid grid-cols-2 gap-3.5 my-auto">
+              
+              <div class="kpi red p-4 rounded-xl border border-[#ffcbd0] bg-gradient-to-br from-[#fff3f4] to-[#ffe8eb] transition-transform hover:-translate-y-1">
+                <div class="kpi-label text-[10px] font-extrabold uppercase text-[#66728a]">🔴 Samajwadi Party Seats</div>
+                <div id="hist-stat-sp-seats" class="kpi-value text-2xl sm:text-3xl font-extrabold text-[#d92f3e] mt-1.5">111 (Alliance 125)</div>
+                <div id="hist-stat-sp-swing" class="kpi-small text-[10px] text-[#718096] mt-1 font-semibold">▲ +10.24% Vote Surge</div>
+              </div>
+
+              <div class="kpi green p-4 rounded-xl border border-[#c9efdf] bg-gradient-to-br from-[#f0fff8] to-[#e8fbf3] transition-transform hover:-translate-y-1">
+                <div class="kpi-label text-[10px] font-extrabold uppercase text-[#66728a]">◉ SP Vote Share %</div>
+                <div id="hist-stat-sp-voteshare" class="kpi-value text-2xl sm:text-3xl font-extrabold text-[#159461] mt-1.5">32.06%</div>
+                <div class="kpi-small text-[10px] text-[#718096] mt-1">Total Vote Share</div>
+              </div>
+
+              <div class="kpi blue p-4 rounded-xl border border-[#d0e0ff] bg-gradient-to-br from-[#f1f6ff] to-[#e8f0ff] transition-transform hover:-translate-y-1">
+                <div class="kpi-label text-[10px] font-extrabold uppercase text-[#66728a]">◎ Voter Turnout %</div>
+                <div id="hist-stat-turnout" class="kpi-value text-2xl sm:text-3xl font-extrabold text-[#245dc8] mt-1.5">60.79%</div>
+                <div class="kpi-small text-[10px] text-[#718096] mt-1">State Turnout</div>
+              </div>
+
+              <div class="kpi purple p-4 rounded-xl border border-[#dfd2ff] bg-gradient-to-br from-[#f7f3ff] to-[#f0eaff] transition-transform hover:-translate-y-1">
+                <div class="kpi-label text-[10px] font-extrabold uppercase text-[#66728a]">▣ Election Outcome</div>
+                <div id="hist-stat-winner" class="kpi-value text-lg sm:text-xl font-extrabold text-[#6b4bd0] mt-1.5">BJP (255 Seats)</div>
+                <div class="kpi-small text-[10px] text-[#718096] mt-1">Winner Majority</div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Bottom Grid: Party Tally & Highlights / Quick Actions -->
+        <div class="bottom-grid grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch pt-2">
+          
+          <!-- Left Card: Party Seat & Vote Share Tally -->
+          <div class="lg:col-span-6 card tally bg-white border border-[#e5eaf2] rounded-2xl shadow-sm p-6 flex flex-col justify-between h-full space-y-4">
+            <div class="section-heading flex justify-between items-center pb-2 border-b border-[#e5eaf2]">
+              <h3 class="text-sm font-extrabold text-[#15213b]">Party Seat & Vote Share Tally</h3>
+              <span id="hist-year-tag" class="total text-xs font-semibold text-[#718096]">403 Total Seats</span>
+            </div>
+
+            <div id="hist-party-tally-container" class="space-y-3">
+              <!-- Dynamic party progress bars initialized by JS -->
+            </div>
+          </div>
+
+          <!-- Right Card: Highlights & Quick Actions -->
+          <div class="lg:col-span-6 card highlights bg-white border border-[#e5eaf2] rounded-2xl shadow-sm p-6 space-y-5">
+            
+            <div class="section-heading flex justify-between items-center pb-2 border-b border-[#e5eaf2]">
+              <h3 class="text-sm font-extrabold text-[#15213b]">Election Highlights</h3>
+              <span class="text-xs text-[#718096] font-semibold">ECI Data</span>
+            </div>
+
+            <div class="highlight-list space-y-2.5 text-xs text-[#526077] font-medium">
+              <div class="highlight flex items-start gap-2.5">
+                <span class="highlight-icon w-2.5 h-2.5 rounded-full bg-[#ff8a00] shrink-0 mt-1"></span>
+                <span>SP vote share increased by <strong>+10.24%</strong> compared to 2017.</span>
+              </div>
+              <div class="highlight flex items-start gap-2.5">
+                <span class="highlight-icon w-2.5 h-2.5 rounded-full bg-[#2864dc] shrink-0 mt-1"></span>
+                <span>BJP maintained a strong lead with <strong>41.29%</strong> vote share.</span>
+              </div>
+              <div class="highlight flex items-start gap-2.5">
+                <span class="highlight-icon w-2.5 h-2.5 rounded-full bg-[#18a66a] shrink-0 mt-1"></span>
+                <span>High voter turnout of <strong>60.79%</strong> across the state.</span>
+              </div>
+              <div class="highlight flex items-start gap-2.5">
+                <span class="highlight-icon w-2.5 h-2.5 rounded-full bg-[#e83b45] shrink-0 mt-1"></span>
+                <span>SP + Alliance secured <strong>125 total seats.</strong></span>
+              </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="actions pt-4 border-t border-[#e5eaf2] space-y-3">
+              <div class="section-heading">
+                <h3 class="text-xs font-extrabold text-[#15213b]">Quick Actions</h3>
+              </div>
+
+              <div class="action-grid grid grid-cols-3 gap-2.5">
+                <a href="https://catalyst.itlcindia.com/" target="_blank" rel="noopener noreferrer" class="action px-3 py-2.5 bg-[#f7faff] border border-[#dfe9fb] rounded-lg text-[#2864dc] text-[11px] font-bold text-center hover:bg-[#edf4ff] transition flex items-center justify-center gap-1">
+                  ◫ &nbsp; Detailed Results
+                </a>
+                <a href="https://catalyst.itlcindia.com/" target="_blank" rel="noopener noreferrer" class="action px-3 py-2.5 bg-[#f7faff] border border-[#dfe9fb] rounded-lg text-[#2864dc] text-[11px] font-bold text-center hover:bg-[#edf4ff] transition flex items-center justify-center gap-1">
+                  ↓ &nbsp; Download Report
+                </a>
+                <a href="https://catalyst.itlcindia.com/" target="_blank" rel="noopener noreferrer" class="action green px-3 py-2.5 bg-[#f1fff9] border border-[#cdeedf] rounded-lg text-[#168b60] text-[11px] font-bold text-center hover:bg-[#e6fbf2] transition flex items-center justify-center gap-1">
+                  ↗ &nbsp; Share Analysis
+                </a>
+              </div>
+            </div>
+
+            <!-- Footer info line -->
+            <div class="pt-3 border-t border-[#e5eaf2] flex justify-between items-center text-[10px] text-[#7b8799]">
+              <span>Source: Election Commission of India</span>
+              <span class="flex items-center gap-1.5">
+                Last Updated: May 2024
+                <span class="w-1.5 h-1.5 rounded-full bg-[#19ad72]"></span>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 04 — SOLUTION & HIERARCHY SECTION (WITH BOOTH VOTE SWING & WIN/LOSS MARGIN ANALYTICS) -->
+    <section id="solution" class="py-24 relative overflow-hidden bg-slate-50 border-t border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 pb-6 border-b border-slate-200">
+          <div class="max-w-2xl">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 tracking-tight leading-tight">
+              One Platform. Every Level Connected.<br>
+              <span class="bg-gradient-to-r from-red-600 via-rose-600 to-emerald-600 bg-clip-text text-transparent">Booth Win/Loss Margins & Vote Swing Tracking</span>
+            </h2>
+          </div>
+          <div class="max-w-lg lg:text-right">
+            <p class="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
+              Seamless operational pipeline connecting top leadership straight down to 1,74,351 booths — analyzing exact vote margins, victory/loss %, swing trends, and field execution.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Hierarchy Pipeline + Real Dashboard Screenshot Integration -->
+        <div class="mt-16 bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xl relative">
+          
+          <div class="text-center text-xs font-mono text-slate-500 uppercase tracking-widest mb-8">
+            Click any level to inspect organizational breakdown, win/loss stats & live metrics
+          </div>
+
+          <!-- Hierarchy Nodes Grid (STATE -> MANDAL -> DISTRICT -> ASSEMBLY -> BOOTH -> FIELD WORKER) -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 relative z-10" id="hierarchy-nodes-container">
+            
+            <!-- State Level -->
+            <button onclick="selectHierarchyNode('state')" id="hnode-state" class="hierarchy-btn active bg-rose-50 border-2 border-rose-600 p-4 rounded-2xl text-center hover:scale-105 transition-all shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-rose-600 text-white font-extrabold text-xs mx-auto flex items-center justify-center mb-2">ST</div>
+              <div class="text-sm font-bold text-slate-900">STATE</div>
+              <div class="text-[10px] text-rose-700 font-mono mt-1 font-semibold">1 Command HQ</div>
+            </button>
+
+            <!-- Mandal Level -->
+            <button onclick="selectHierarchyNode('mandal')" id="hnode-mandal" class="hierarchy-btn bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-amber-500 hover:scale-105 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 font-extrabold text-xs mx-auto flex items-center justify-center mb-2">MN</div>
+              <div class="text-sm font-bold text-slate-900">MANDAL</div>
+              <div class="text-[10px] text-slate-500 font-mono mt-1">18 Mandals / Divisions</div>
+            </button>
+
+            <!-- District Level -->
+            <button onclick="selectHierarchyNode('district')" id="hnode-district" class="hierarchy-btn bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-cyan-500 hover:scale-105 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-cyan-100 text-cyan-700 font-extrabold text-xs mx-auto flex items-center justify-center mb-2">DT</div>
+              <div class="text-sm font-bold text-slate-900">DISTRICT</div>
+              <div class="text-[10px] text-slate-500 font-mono mt-1">75 Districts</div>
+            </button>
+
+            <!-- Assembly Level -->
+            <button onclick="selectHierarchyNode('assembly')" id="hnode-assembly" class="hierarchy-btn bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-indigo-500 hover:scale-105 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 font-extrabold text-xs mx-auto flex items-center justify-center mb-2">AC</div>
+              <div class="text-sm font-bold text-slate-900">ASSEMBLY</div>
+              <div class="text-[10px] text-slate-500 font-mono mt-1">403 Constituencies</div>
+            </button>
+
+            <!-- Booth Level -->
+            <button onclick="selectHierarchyNode('booth')" id="hnode-booth" class="hierarchy-btn bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-rose-500 hover:scale-105 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 font-extrabold text-xs mx-auto flex items-center justify-center mb-2">BT</div>
+              <div class="text-sm font-bold text-slate-900">BOOTH</div>
+              <div class="text-[10px] text-slate-500 font-mono mt-1">1,74,351 Booths</div>
+            </button>
+
+            <!-- Field Worker Level -->
+            <button onclick="selectHierarchyNode('worker')" id="hnode-worker" class="hierarchy-btn bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center hover:border-purple-500 hover:scale-105 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 font-extrabold text-xs mx-auto flex items-center justify-center mb-2">FW</div>
+              <div class="text-sm font-bold text-slate-900">FIELD WORKER</div>
+              <div class="text-[10px] text-slate-500 font-mono mt-1">48,500 Active Cadre</div>
+            </button>
+
+          </div>
+
+          <!-- NEW INTEGRATED FEATURE: BOOTH VOTE SWING & WIN/LOSS MARGIN DASHBOARD CARDS (public/vote-swing/) -->
+          <div class="mt-10 pt-8 border-t border-slate-200 space-y-6">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span class="px-2.5 py-0.5 rounded bg-red-600 text-white font-black text-xs">NEW BOOTH ANALYTICS MODULE</span>
+                <h3 class="text-xl sm:text-2xl font-black text-slate-900 mt-1">Booth-Wise Victory / Deficit Margins & Vote Swing Tracking</h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-medium">Analyze exact vote differences, winning margins, loss recovery targets, and party vote swings at every single booth.</p>
+              </div>
+              <span class="px-3 py-1.5 rounded-xl bg-red-50 text-red-700 border border-red-200 text-xs font-mono font-bold self-start sm:self-center">
+                📊 1,74,351 BOOTHS MAPPED
+              </span>
+            </div>
+
+            <!-- 2 Vote Swing & Booth Margin Screenshots Grid (/vote-swing/booth  data .png & /vote-swing/booth 2.png) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Vote Swing Card 1: Booth Data & Win/Loss Margins (/vote-swing/booth  data .png) -->
+              <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white rounded-3xl p-5 border border-red-500 shadow-xl space-y-4 cursor-pointer group" onclick="openImageModal('/vote-swing/booth  data .png')">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-yellow-300 animate-ping"></span>
+                    <span class="text-xs font-mono font-bold text-yellow-300">BOOTH VOTE MARGIN ANALYTICS</span>
+                  </div>
+                  <span class="text-xs font-bold text-white bg-white/20 px-2.5 py-1 rounded-lg backdrop-blur-sm flex items-center gap-1">
+                    <i data-lucide="maximize-2" class="w-3 h-3"></i> Enlarge
+                  </span>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-white/30 bg-slate-950 shadow-inner">
+                  <img src="/vote-swing/booth  data .png" alt="Booth Vote Margin Data Dashboard" class="w-full h-56 object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 pt-1 text-center font-mono">
+                  <div class="bg-black/30 p-2.5 rounded-xl border border-white/20">
+                    <div class="text-[10px] text-red-200">Victory Margin Range</div>
+                    <div class="text-base font-black text-yellow-300">+50 to +1,200 Votes</div>
+                  </div>
+                  <div class="bg-black/30 p-2.5 rounded-xl border border-white/20">
+                    <div class="text-[10px] text-red-200">Deficit Recovery Target</div>
+                    <div class="text-base font-black text-white">&lt; 300 Votes Deficit</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Vote Swing Card 2: Booth Vote Swing Tracking (/vote-swing/booth 2.png) -->
+              <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white rounded-3xl p-5 border border-red-500 shadow-xl space-y-4 cursor-pointer group" onclick="openImageModal('/vote-swing/booth 2.png')">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span class="text-xs font-mono font-bold text-yellow-300">BOOTH VOTE SWING % SHIFT</span>
+                  </div>
+                  <span class="text-xs font-bold text-white bg-white/20 px-2.5 py-1 rounded-lg backdrop-blur-sm flex items-center gap-1">
+                    <i data-lucide="maximize-2" class="w-3 h-3"></i> Enlarge
+                  </span>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-white/30 bg-slate-950 shadow-inner">
+                  <img src="/vote-swing/booth 2.png" alt="Booth Vote Swing Tracking Dashboard" class="w-full h-56 object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 pt-1 text-center font-mono">
+                  <div class="bg-black/30 p-2.5 rounded-xl border border-white/20">
+                    <div class="text-[10px] text-red-200">Average Vote Swing %</div>
+                    <div class="text-base font-black text-emerald-300">+8.6% SP Swing 🚩</div>
+                  </div>
+                  <div class="bg-black/30 p-2.5 rounded-xl border border-white/20">
+                    <div class="text-[10px] text-red-200">Swing Status</div>
+                    <div class="text-base font-black text-yellow-300">Favorable Transition</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Data Flow Cycle Visualizer -->
+          <div class="mt-12 pt-8 border-t border-slate-200">
+            <div class="text-center mb-6">
+              <span class="text-xs font-mono text-rose-600 uppercase tracking-widest mb-2 font-bold">TWO-WAY DATA FLOW PIPELINE</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-1">Leadership → Field → Leadership</h3>
+            </div>
+
+            <!-- Flow Steps Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-center text-xs">
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center gap-2">
+                <i data-lucide="send" class="w-4 h-4 text-rose-600"></i>
+                <span class="font-bold text-slate-900">Task Assigned</span>
+                <span class="text-[10px] text-slate-500">From Admin Portal</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center gap-2">
+                <i data-lucide="smartphone" class="w-4 h-4 text-cyan-600"></i>
+                <span class="font-bold text-slate-900">Mobile App</span>
+                <span class="text-[10px] text-slate-500">Field Cadre Alert</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center gap-2">
+                <i data-lucide="activity" class="w-4 h-4 text-amber-600"></i>
+                <span class="font-bold text-slate-900">Field Activity</span>
+                <span class="text-[10px] text-slate-500">Door-to-door / Survey</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center gap-2">
+                <i data-lucide="check-square" class="w-4 h-4 text-emerald-600"></i>
+                <span class="font-bold text-slate-900">Report Submitted</span>
+                <span class="text-[10px] text-slate-500">GPS & Photo Tagged</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center gap-2">
+                <i data-lucide="layout-dashboard" class="w-4 h-4 text-indigo-600"></i>
+                <span class="font-bold text-slate-900">Admin Dashboard</span>
+                <span class="text-[10px] text-slate-500">Instant Verification</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center gap-2">
+                <i data-lucide="trending-up" class="w-4 h-4 text-purple-600"></i>
+                <span class="font-bold text-slate-900">Swing Analytics</span>
+                <span class="text-[10px] text-slate-500">Real-time Strategy Shift</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4 Feature Cards -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center border border-rose-200">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Centralized Data</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Consolidate voter rolls, past election margins, caste demographics, and daily field updates in one secure cloud repository.
+            </p>
+          </div>
+
+          <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center border border-cyan-200">
+              <i data-lucide="list-todo" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Direct Task Management</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Assign targeted tasks to booth presidents, block in-charges, or individual field workers with deadline alerts and tracking.
+            </p>
+          </div>
+
+          <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-200">
+              <i data-lucide="file-bar-chart-2" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Real-Time Field Reporting</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Field workers submit geo-tagged voter sentiment, issues, and turnout counts directly from the Android/iOS app.
+            </p>
+          </div>
+
+          <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center border border-indigo-200">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Role-Based Access</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Custom security permissions for State Chairs, District Chiefs, MLA candidates, Mandal Presidents, and Booth Workers.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 04 — BOOTH INTELLIGENCE (LARGEST VISUAL SECTION WITH REAL MAP SCREENSHOTS) -->
+    <section id="booth-intelligence" class="py-24 bg-white border-t border-b border-slate-200 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col lg:flex-row items-start justify-between gap-6 mb-12 pb-6 border-b border-slate-200">
+          <div class="max-w-xl">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Every Booth. One Complete Intelligence Profile.
+            </h2>
+          </div>
+          <div class="space-y-4 max-w-lg lg:text-right">
+            <p class="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
+              Combine historical election performance with live ground reality for surgical booth-level strategy.
+            </p>
+            <!-- Booth Selector Switcher -->
+            <div class="flex flex-wrap lg:justify-end gap-2.5 pt-1">
+              <button onclick="switchBooth('142')" id="btn-booth-142" class="booth-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-rose-600 text-white border border-rose-600 shadow-md">
+                BOOTH #142 (Govt Primary School)
+              </button>
+              <button onclick="switchBooth('143')" id="btn-booth-143" class="booth-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border border-slate-300 hover:text-slate-900">
+                BOOTH #143 (Community Hall)
+              </button>
+              <button onclick="switchBooth('156')" id="btn-booth-156" class="booth-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 border border-slate-300 hover:text-slate-900">
+                BOOTH #156 (Panchayat Bhavan)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Split Display (Left: Booth Dashboard, Right: Historical + Current Ground) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- LEFT SIDE: BOOTH DASHBOARD CARD -->
+          <div class="lg:col-span-5 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6 relative overflow-hidden backdrop-blur-xl">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 blur-3xl rounded-full"></div>
+
+            <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+              <div>
+                <span class="text-xs font-mono text-rose-600 uppercase tracking-widest font-bold" id="booth-ac-name">AC 184 — LUCKNOW WEST</span>
+                <h3 class="text-2xl font-extrabold text-slate-900 mt-0.5" id="booth-number-header">BOOTH #142</h3>
+                <p class="text-xs text-slate-600 font-medium" id="booth-location-text">Govt Primary School Room No. 1, Rajajipuram</p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300" id="booth-status-badge">
+                KEY BATTLEGROUND
+              </span>
+            </div>
+
+            <!-- Core Booth Metrics Grid (Samajwadi Red Cards) -->
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-4 rounded-2xl border border-red-500 shadow-md">
+                <div class="text-xs text-red-100 font-bold uppercase">Total Voters</div>
+                <div class="text-3xl font-black font-mono text-yellow-300 mt-1" id="b-total-voters">1,240</div>
+                <div class="text-[10px] text-red-100 mt-1">640 Male | 600 Female</div>
+              </div>
+              <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-4 rounded-2xl border border-red-500 shadow-md">
+                <div class="text-xs text-red-100 font-bold uppercase">Votes Polled (Last)</div>
+                <div class="text-3xl font-black font-mono text-yellow-300 mt-1" id="b-votes-polled">892</div>
+                <div class="text-[10px] text-red-100 mt-1 font-semibold">2022 Assembly Election</div>
+              </div>
+              <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-4 rounded-2xl border border-red-500 shadow-md">
+                <div class="text-xs text-red-100 font-bold uppercase">Turnout %</div>
+                <div class="text-3xl font-black font-mono text-yellow-300 mt-1" id="b-turnout-pct">71.9%</div>
+                <div class="text-[10px] text-red-100 mt-1 font-semibold">+4.2% vs 2017</div>
+              </div>
+              <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-4 rounded-2xl border border-red-500 shadow-md">
+                <div class="text-xs text-red-100 font-bold uppercase">Historical Vote Margin</div>
+                <div class="text-3xl font-black font-mono text-yellow-300 mt-1" id="b-vote-margin">+560</div>
+                <div class="text-[10px] text-red-100 mt-1">Winning Lead</div>
+              </div>
+            </div>
+
+            <!-- In-charge Worker info -->
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 border border-rose-300 flex items-center justify-center font-extrabold">
+                  SK
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-slate-900" id="booth-incharge-name">Suresh Kumar Verma</div>
+                  <div class="text-[10px] text-slate-500">Booth President | Cadre ID #8841</div>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-mono font-bold">
+                ● ACTIVE NOW
+              </span>
+            </div>
+
+            <!-- Real Solution Screenshot Integration (public/Solution/step 1.png) -->
+            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer group" onclick="openImageModal('/Solution/step 1.png')">
+              <img src="/Solution/step 1.png" alt="Booth Solution Setup Dashboard" class="w-full h-40 object-cover object-top group-hover:scale-105 transition-transform duration-300">
+              <div class="bg-white px-3 py-1.5 text-[11px] font-mono text-slate-600 flex items-center justify-between border-t border-slate-200">
+                <span>Step 1: Centralized Booth Voter Data & Setup</span>
+                <span class="text-rose-600 font-bold flex items-center gap-1"><i data-lucide="maximize-2" class="w-3 h-3"></i> View Details</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDE: HISTORICAL (Solution step 2.png & step 3.png) + CURRENT GROUND INTELLIGENCE -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Dual Section Tabs Header -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Card A: Historical Intelligence with Solution Image (step 2.png) -->
+              <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-md space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                  <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                    <i data-lucide="history" class="w-4 h-4 text-rose-600"></i> Historical Intelligence
+                  </h4>
+                  <span class="text-[10px] font-mono text-slate-500">PAST ELECTIONS</span>
+                </div>
+
+                <!-- Solution Image Preview for Historical Election Comparison (step 2.png) -->
+                <div class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer group" onclick="openImageModal('/Solution/step 2.png')">
+                  <img src="/Solution/step 2.png" alt="Party Wise Historical Comparison Map" class="w-full h-32 object-cover object-top group-hover:scale-105 transition-transform">
+                </div>
+
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center bg-slate-50 p-2 rounded-lg border border-slate-200">
+                    <span class="text-slate-600">Previous Election Results</span>
+                    <span class="font-bold text-slate-900 font-mono" id="hist-year">2022 Assembly</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-slate-50 p-2 rounded-lg border border-slate-200">
+                    <span class="text-slate-600">Winning Party & Margin</span>
+                    <span class="font-bold text-rose-600 font-mono" id="hist-winner">SP (+560 votes)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card B: Current Ground Intelligence with Solution Image (step 3.png) -->
+              <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-md space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                  <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                    <i data-lucide="activity" class="w-4 h-4 text-cyan-600"></i> Current Ground Intelligence
+                  </h4>
+                  <span class="text-[10px] font-mono text-emerald-600 font-bold">REAL-TIME</span>
+                </div>
+
+                <!-- Solution Image Preview for Live Ground Activity (step 3.png) -->
+                <div class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer group" onclick="openImageModal('/Solution/step 3.png')">
+                  <img src="/Solution/step 3.png" alt="Active Participants Real-time Map" class="w-full h-32 object-cover object-top group-hover:scale-105 transition-transform">
+                </div>
+
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between items-center bg-slate-50 p-2 rounded-lg border border-slate-200">
+                    <span class="text-slate-600">Field Activity Status</span>
+                    <span class="font-bold text-emerald-600 flex items-center gap-1 font-mono">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-ping"></span> Live Surveying
+                    </span>
+                  </div>
+                  <div class="flex justify-between items-center bg-slate-50 p-2 rounded-lg border border-slate-200">
+                    <span class="text-slate-600">Survey Coverage</span>
+                    <span class="font-bold text-slate-900 font-mono" id="cg-survey-coverage">1,041 / 1,240 Voters</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Detailed Booth Activity Timeline Feed -->
+            <div class="bg-white border border-slate-200 p-6 rounded-2xl shadow-md space-y-3">
+              <div class="flex items-center justify-between text-xs font-bold text-slate-800">
+                <span>Booth #142 Live Feed Stream</span>
+                <span class="text-[10px] text-slate-500 font-mono">LATEST SYNCHRONIZED ENTRIES</span>
+              </div>
+              <div class="space-y-2 text-xs font-mono" id="booth-live-timeline">
+                <div class="p-2.5 rounded bg-slate-50 border border-slate-200 text-slate-700 flex items-center justify-between">
+                  <div>
+                    <span class="text-slate-400">[14:32]</span> Door-to-door survey completed in Sector 3 (Family of 6 tagged)
+                  </div>
+                  <span class="text-[10px] text-emerald-700 font-bold bg-emerald-100 px-2 py-0.5 rounded">VERIFIED</span>
+                </div>
+                <div class="p-2.5 rounded bg-slate-50 border border-slate-200 text-slate-700 flex items-center justify-between">
+                  <div>
+                    <span class="text-slate-400">[13:15]</span> Voter Slip Distribution: 620/892 Slips delivered by Ramesh
+                  </div>
+                  <span class="text-[10px] text-cyan-700 font-bold bg-cyan-100 px-2 py-0.5 rounded">IN PROGRESS</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+      </div>
+    </section>
+
+    <!-- 05 — KARYAKARTA MOBILE APP & ADHYAKSH DIRECT CONNECT SECTION -->
+    <section id="admin-app" class="py-24 relative overflow-hidden bg-slate-50 border-t border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <!-- Section Header (Left Heading, Right Subtitle) -->
+        <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 pb-6 border-b border-slate-200">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-100 text-rose-700 border border-rose-200 mb-3">
+              <span>📱</span> KARYAKARTA MOBILE APP & ADHYAKSH DIRECT CONNECT
+            </div>
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Direct Adhyaksh-to-Karyakarta Mobilization & Query Resolution
+            </h2>
+          </div>
+          <div class="max-w-lg lg:text-right">
+            <p class="text-slate-600 text-sm sm:text-base font-medium leading-relaxed">
+              Ground Karyakartas get direct mobile task assignments from Party Adhyaksh — executing Flag Hoisting campaigns (Jhanda Lagao), Door-to-Door surveys, and submitting field queries for instant resolution.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 KPI Cards: Core App Funda & Query Resolution Pipeline -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-rose-600 font-mono">CORE PILAR 01</span>
+              <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-xs">🏛️</div>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900">Direct Adhyaksh Connect</h3>
+            <p class="text-xs text-slate-500 leading-snug">Direct 2-way communication link between State/District Adhyaksh & ground workers.</p>
+          </div>
+
+          <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-amber-600 font-mono">CORE PILAR 02</span>
+              <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs">🚩</div>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900">Campaign & Flag Abhiyaan</h3>
+            <p class="text-xs text-slate-500 leading-snug">Level-by-level tracking of Jhanda Lagao campaigns, voter surveys, and program tasks.</p>
+          </div>
+
+          <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-blue-600 font-mono">CORE PILAR 03</span>
+              <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xs">📲</div>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900">Direct Mobile Tasking</h3>
+            <p class="text-xs text-slate-500 leading-snug">Karyakartas receive instant task alerts on their app with GPS & photo completion verification.</p>
+          </div>
+
+          <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-600 font-mono">CORE PILAR 04</span>
+              <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xs">💬</div>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900">Query Resolution Engine</h3>
+            <p class="text-xs text-slate-500 leading-snug">Track queries sent by Karyakartas and exact resolution status by Adhyaksh & Leadership levels.</p>
+          </div>
+
+        </div>
+
+        <!-- 2-Column Layout (Left: Admin Web Portal, Right: Karyakarta Mobile Smartphone Mockup) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
+          
+          <!-- LEFT — ADMIN WEB COMMAND PORTAL WITH REAL SCREENSHOT (1 (6).png) -->
+          <div class="lg:col-span-7 bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-xl">
+            <!-- Browser Top Bar -->
+            <div class="bg-slate-100 px-4 py-3 border-b border-slate-200 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                <span class="font-mono text-slate-600 ml-2 font-semibold">Samajwadi Party Adhyaksh Command Portal</span>
+              </div>
+              <span class="text-rose-600 font-bold font-mono text-[11px]">ADHYAKSH HQ LIVE</span>
+            </div>
+
+            <!-- Admin Content & Capabilities -->
+            <div class="p-6 space-y-6">
+              
+              <!-- Tab bar -->
+              <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3 text-xs">
+                <button onclick="setAdminTab('hierarchy')" id="atab-hierarchy" class="admin-tab-btn px-3 py-1.5 rounded-lg bg-rose-600 text-white font-bold shadow-sm">Manage Hierarchy</button>
+                <button onclick="setAdminTab('tasks')" id="atab-tasks" class="admin-tab-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:text-slate-900 font-medium">Push Karyakarta Tasks</button>
+                <button onclick="setAdminTab('workers')" id="atab-workers" class="admin-tab-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:text-slate-900 font-medium">Flag Abhiyaan (Jhanda)</button>
+                <button onclick="setAdminTab('surveys')" id="atab-surveys" class="admin-tab-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:text-slate-900 font-medium">Door-to-Door Surveys</button>
+                <button onclick="setAdminTab('reports')" id="atab-reports" class="admin-tab-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:text-slate-900 font-medium">Resolve Karyakarta Queries</button>
+              </div>
+
+              <!-- Interactive Display Box for Admin Tab -->
+              <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl min-h-[220px]" id="admin-tab-display">
+                <div class="flex items-center justify-between mb-3">
+                  <h4 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <i data-lucide="sitemap" class="w-4 h-4 text-rose-600"></i> Karyakarta Task Push & Query Resolution Status
+                  </h4>
+                  <span class="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded font-mono font-bold">98.4% Query Resolved</span>
+                </div>
+                
+                <!-- Real Screenshot 1 (6).png -->
+                <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer group" onclick="openImageModal('/1 (6).png')">
+                  <img src="/1 (6).png" alt="Adhyaksh Command Portal Status" class="w-full h-36 object-cover object-top group-hover:scale-105 transition-transform">
+                </div>
+              </div>
+
+              <!-- 9 Core Platform Checkmarks -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-medium">
+                <div class="flex items-center gap-2 text-slate-700"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600"></i> Direct Adhyaksh Push</div>
+                <div class="flex items-center gap-2 text-slate-700"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600"></i> Flag Hoisting (Jhanda)</div>
+                <div class="flex items-center gap-2 text-slate-700"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600"></i> Door-to-Door Surveys</div>
+                <div class="flex items-center gap-2 text-slate-700"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600"></i> Karyakarta App Tasks</div>
+                <div class="flex items-center gap-2 text-slate-700"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600"></i> Query Escalation Engine</div>
+                <div class="flex items-center gap-2 text-slate-700"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600"></i> Adhyaksh Query Resolution</div>
+                <div class="flex items-center gap-2 text-slate-700"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600"></i> GPS Photo Verification</div>
+                <div class="flex items-center gap-2 text-slate-700"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600"></i> Level-wise Campaign Split</div>
+                <div class="flex items-center gap-2 text-slate-700"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600"></i> Historical Data Sync</div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT — KARYAKARTA MOBILE APP SMARTPHONE MOCKUP -->
+          <div class="lg:col-span-5 flex justify-center relative">
+            
+            <!-- Animated Sync Beam in middle -->
+            <div class="hidden lg:flex absolute -left-12 top-1/2 -translate-y-1/2 flex-col items-center gap-2 z-20">
+              <div class="px-2 py-1 rounded bg-rose-100 border border-rose-300 text-[9px] font-mono text-rose-700 font-bold animate-pulse">
+                ADHYAKSH ↔ WORKER
+              </div>
+              <div class="w-16 h-0.5 bg-gradient-to-r from-rose-600 via-amber-500 to-emerald-500 animate-pulse"></div>
+            </div>
+
+            <!-- Phone Container Frame -->
+            <div class="w-[300px] sm:w-[325px] bg-slate-900 text-white border-4 border-slate-800 rounded-[40px] p-4 shadow-2xl space-y-3.5 relative overflow-hidden">
+              
+              <!-- Phone Notch & Header -->
+              <div class="flex justify-between items-center px-2 pt-1 pb-2 border-b border-slate-800 text-[10px] font-mono text-slate-400">
+                <span>09:41 AM</span>
+                <div class="w-16 h-3 bg-slate-800 rounded-full mx-auto"></div>
+                <div class="flex items-center gap-1">
+                  <i data-lucide="wifi" class="w-3 h-3 text-emerald-400"></i>
+                  <i data-lucide="battery" class="w-3 h-3 text-emerald-400"></i>
+                </div>
+              </div>
+
+              <!-- App Header: Karyakarta Profile & Adhyaksh Connection -->
+              <div class="flex items-center justify-between px-1">
+                <div>
+                  <div class="text-[9px] text-rose-400 uppercase tracking-wider font-bold">KARYAKARTA FIELD PORTAL</div>
+                  <h4 class="text-xs font-black text-white">Adhyaksh Direct Desk</h4>
+                </div>
+                <div class="w-8 h-8 rounded-full bg-rose-600 text-white flex items-center justify-center font-black text-xs shadow-md">
+                  SP
+                </div>
+              </div>
+
+              <!-- TASK 1: FLAG HOISTING CAMPAIGN (Jhanda Lagao) -->
+              <div class="bg-slate-800/95 border border-slate-700 p-3 rounded-2xl space-y-2">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <span class="text-[9px] text-amber-400 font-mono font-bold">🚩 CAMPAIGN TASK</span>
+                    <h5 class="text-xs font-bold text-white">Jhanda Lagao Abhiyaan</h5>
+                    <p class="text-[10px] text-slate-300">Target: 50 House Flags | Booth #142</p>
+                  </div>
+                  <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-amber-500/20 text-amber-300">
+                    34 Flags Done
+                  </span>
+                </div>
+                <button onclick="triggerAppTask('flag')" class="w-full py-1.5 rounded-xl text-xs font-bold text-white bg-amber-600 hover:bg-amber-500 shadow-md flex items-center justify-center gap-1.5 transition-all">
+                  <span>SUBMIT PHOTO PROOF</span>
+                  <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+
+              <!-- TASK 2: DOOR-TO-DOOR VOTER SURVEY -->
+              <div class="bg-slate-800/95 border border-slate-700 p-3 rounded-2xl space-y-2">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <span class="text-[9px] text-rose-400 font-mono font-bold">📋 SURVEY PROGRAM</span>
+                    <h5 class="text-xs font-bold text-white">Door-to-Door Voter Survey</h5>
+                    <p class="text-[10px] text-slate-300">Voter slip & family sentiment logging</p>
+                  </div>
+                  <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-rose-500/20 text-rose-300">
+                    Active
+                  </span>
+                </div>
+                <button onclick="triggerAppTask('survey')" class="w-full py-1.5 rounded-xl text-xs font-bold text-white bg-rose-600 hover:bg-rose-500 shadow-md flex items-center justify-center gap-1.5 transition-all">
+                  <span>START SURVEY</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+
+              <!-- QUERY ESCALATION & RESOLUTION BOX -->
+              <div class="bg-slate-800/95 border border-slate-700 p-3 rounded-2xl space-y-2">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <span class="text-[9px] text-emerald-400 font-mono font-bold">💬 QUERY ESCALATION</span>
+                    <h5 class="text-xs font-bold text-white">Karyakarta Query #1042</h5>
+                    <p class="text-[10px] text-slate-300">Local Ration & EVM Slip Verification</p>
+                  </div>
+                  <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-emerald-500/20 text-emerald-300">
+                    RESOLVED BY ADHYAKSH
+                  </span>
+                </div>
+                <div class="flex justify-between text-[10px] text-slate-400 pt-0.5 font-mono">
+                  <span>Query Sent: Today 08:30 AM</span>
+                  <span class="text-emerald-400 font-bold">✓ Solved</span>
+                </div>
+              </div>
+
+              <!-- Live Mobile Notification Simulator -->
+              <div class="bg-emerald-950/90 border border-emerald-500/40 p-2.5 rounded-xl text-[10px] text-emerald-300 flex items-center gap-2 font-mono" id="mobile-toast">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>District Adhyaksh Ji resolved Query #1042</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Connection Pipeline Flow Statement (Adhyaksh Tasking -> Mobile App -> Flag/Survey -> Query Resolution) -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-md">
+          <div class="text-xs font-mono text-rose-600 uppercase tracking-widest mb-2 font-bold">ADHYAKSH ↔ KARYAKARTA COMPLETE OPERATIONAL PIPELINE</div>
+          <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-bold text-slate-900">
+            <span class="px-3 py-1.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700">1. Adhyaksh Direct Task Push</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-rose-600"></i>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200">2. Karyakarta Mobile App Received</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-rose-600"></i>
+            <span class="px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-800">3. Flag Hoisting & Survey Execution</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-rose-600"></i>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200">4. Ground Query Escalated</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-rose-600"></i>
+            <span class="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700">5. Adhyaksh Level Query Resolved</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 06 — LEADERSHIP INTELLIGENCE (INTEGRATED WITH REAL SCREENSHOT 1 (8).png & 1 (2).png) -->
+    <section id="leadership" class="py-24 bg-white border-t border-slate-200 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 mb-12 pb-6 border-b border-slate-200">
+          <div class="max-w-xl">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              From Data to Better Decisions
+            </h2>
+          </div>
+          <div class="max-w-lg lg:text-right">
+            <p class="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
+              Full macro-to-micro view empowering state leaders, candidates, and campaign strategists.
+            </p>
+          </div>
+        </div>
+
+        <!-- Premium Command Center Dashboard Box -->
+        <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xl space-y-8 backdrop-blur-xl">
+          
+          <!-- Top 8 Leadership Metrics Banner (Samajwadi Red Cards) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+            <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-3 rounded-xl border border-red-500 text-center shadow-lg hover:scale-105 transition-all">
+              <div class="text-[10px] text-red-100 font-bold uppercase">Districts</div>
+              <div class="text-xl font-black font-mono text-yellow-300 mt-0.5">75</div>
+            </div>
+            <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-3 rounded-xl border border-red-500 text-center shadow-lg hover:scale-105 transition-all">
+              <div class="text-[10px] text-red-100 font-bold uppercase">Assemblies</div>
+              <div class="text-xl font-black font-mono text-yellow-300 mt-0.5">403</div>
+            </div>
+            <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-3 rounded-xl border border-red-500 text-center shadow-lg hover:scale-105 transition-all">
+              <div class="text-[10px] text-red-100 font-bold uppercase">Mandals</div>
+              <div class="text-xl font-black font-mono text-yellow-300 mt-0.5">18</div>
+            </div>
+            <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-3 rounded-xl border border-red-500 text-center shadow-lg hover:scale-105 transition-all">
+              <div class="text-[10px] text-red-100 font-bold uppercase">Booths / Stations</div>
+              <div class="text-lg sm:text-xl font-black font-mono text-yellow-300 mt-0.5">1,74,351</div>
+            </div>
+
+            <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-3 rounded-xl border border-red-500 text-center shadow-lg hover:scale-105 transition-all">
+              <div class="text-[10px] text-red-100 font-bold uppercase">Total Voters</div>
+              <div class="text-lg sm:text-xl font-black font-mono text-yellow-300 mt-0.5">15.0 Cr+</div>
+            </div>
+            <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-3 rounded-xl border border-red-500 text-center shadow-lg hover:scale-105 transition-all">
+              <div class="text-[10px] text-red-100 font-bold uppercase">Turnout %</div>
+              <div class="text-lg sm:text-xl font-black font-mono text-yellow-300 mt-0.5">59.51%</div>
+            </div>
+            <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-3 rounded-xl border border-red-500 text-center shadow-lg hover:scale-105 transition-all">
+              <div class="text-[10px] text-red-100 font-bold uppercase">Active Workers</div>
+              <div class="text-lg sm:text-xl font-black font-mono text-yellow-300 mt-0.5">48,500</div>
+            </div>
+            <div class="bg-gradient-to-br from-red-600 via-rose-600 to-red-700 text-white p-3 rounded-xl border border-red-500 text-center shadow-lg hover:scale-105 transition-all">
+              <div class="text-[10px] text-red-100 font-bold uppercase">Survey Coverage</div>
+              <div class="text-lg sm:text-xl font-black font-mono text-yellow-300 mt-0.5">88.4%</div>
+            </div>
+          </div>
+
+          <!-- Real Leadership Screenshot 1 (8).png Integration -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="text-base font-bold text-slate-900">Leadership Campaign Growth & Communication Performance</h4>
+                <p class="text-xs text-slate-500">Real-time membership addition trends & cadre complaint resolution rates</p>
+              </div>
+              <span class="text-xs font-mono text-rose-600 font-bold bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200">MACRO ANALYTICS</span>
+            </div>
+
+            <!-- Screenshot 1 (8).png -->
+            <div class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer group" onclick="openImageModal('/1 (8).png')">
+              <img src="/1 (8).png" alt="Leadership Membership & Communication Dashboard" class="w-full h-56 object-cover object-top group-hover:scale-[1.01] transition-transform">
+            </div>
+          </div>
+
+
+
+          <!-- Final High-Impact Statement Banner -->
+          <div class="pt-8 border-t border-slate-200 text-center space-y-4">
+            <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+              One Platform. From Leadership to the Booth.
+            </h3>
+            <p class="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed font-medium">
+              Connect historical election data with real-time field intelligence, organizational activity and operational reporting — creating one connected view of the entire field ecosystem.
+            </p>
+
+            <div class="pt-4">
+              <a href="https://catalyst.itlcindia.com/" target="_blank" rel="noopener noreferrer" class="btn-pill-blue px-10 py-4 text-base sm:text-lg font-bold group">
+                <img src="/sp_logo.png" alt="SP Logo" class="w-8 h-6 object-contain rounded bg-white p-0.5">
+                <span>Login / Request Demo</span>
+                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FULLSCREEN IMAGE ZOOM MODAL -->
+  <div id="image-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md" onclick="closeImageModal()">
+    <div class="relative max-w-5xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl border border-slate-200" onclick="event.stopPropagation()">
+      <button onclick="closeImageModal()" class="absolute top-4 right-4 z-10 bg-slate-900/80 text-white hover:bg-slate-900 p-2 rounded-full shadow-lg">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      <div class="p-2">
+        <img id="image-modal-img" src="" alt="Enlarged Dashboard Screenshot" class="w-full h-auto max-h-[80vh] object-contain rounded-xl">
+      </div>
+      <div class="bg-slate-100 px-4 py-3 border-t border-slate-200 flex justify-between items-center text-xs font-mono text-slate-700">
+        <span id="image-modal-title">ElectraPulse Platform Screenshot</span>
+        <button onclick="closeImageModal()" class="px-3 py-1 bg-slate-900 text-white rounded font-bold text-[11px]">Close Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEMO REQUEST MODAL CONTAINER -->
+  <div id="demo-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative space-y-6">
+      <button onclick="closeDemoModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-900 p-1">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 text-rose-600 text-xs font-bold">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> SCHEDULE ENTERPRISE DEMO
+        </div>
+        <h3 class="text-2xl font-bold text-slate-900 mt-2">Request Platform Demo</h3>
+        <p class="text-xs text-slate-600 font-medium">Experience ElectraPulse tailored for your State, District or Constituency.</p>
+      </div>
+
+      <form id="demo-form" onsubmit="handleDemoSubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block text-slate-700 font-bold mb-1">Full Name *</label>
+          <input type="text" required placeholder="e.g. Vikramaditya Singh" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-rose-600 focus:bg-white">
+        </div>
+        <div>
+          <label class="block text-slate-700 font-bold mb-1">Organization / Political Party / Campaign *</label>
+          <input type="text" required placeholder="e.g. Campaign Office / State HQ" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-rose-600 focus:bg-white">
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-slate-700 font-bold mb-1">Role / Designation</label>
+            <input type="text" placeholder="State In-charge / Candidate" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-rose-600 focus:bg-white">
+          </div>
+          <div>
+            <label class="block text-slate-700 font-bold mb-1">Phone Number *</label>
+            <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-rose-600 focus:bg-white">
+          </div>
+        </div>
+        <div>
+          <label class="block text-slate-700 font-bold mb-1">State / Target Region</label>
+          <select class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 focus:outline-none focus:border-rose-600 focus:bg-white">
+            <option>Uttar Pradesh</option>
+            <option>Bihar</option>
+            <option>Maharashtra</option>
+            <option>Madhya Pradesh</option>
+            <option>West Bengal</option>
+            <option>Other State / National Level</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-red-600 via-rose-600 to-emerald-700 hover:from-red-700 hover:to-emerald-800 shadow-lg shadow-red-600/30 transition-all flex items-center justify-center gap-2">
+          <span>Submit & Go to Demo Portal</span>
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-12 text-slate-600 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center">
+        <div class="h-10 w-auto rounded-lg overflow-hidden border border-slate-200 shadow-sm flex items-center bg-white p-0.5">
+          <img src="/sp_logo.png" alt="Samajwadi Party Official Logo" class="h-full w-auto object-contain rounded">
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 font-medium">
+        <a href="#hero" class="hover:text-rose-600">Overview</a>
+        <a href="#problem" class="hover:text-rose-600">Problem</a>
+        <a href="#solution" class="hover:text-rose-600">Hierarchy</a>
+        <a href="#booth-intelligence" class="hover:text-rose-600">Booth Intelligence</a>
+        <a href="#leadership" class="hover:text-rose-600">Leadership</a>
+      </div>
+
+      <div class="text-[11px] font-mono text-slate-500 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span>© 2026 ELECTRAPULSE. All rights reserved. 256-Bit Encrypted Platform.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
