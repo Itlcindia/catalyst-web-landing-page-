@@ -80,37 +80,36 @@
       <!-- Progress Bar Track Container with Cycle Riding On Line (Lowered Position) -->
       <div class="w-72 sm:w-96 md:w-[480px] relative mt-16 sm:mt-20 mb-6 sm:mb-8">
         
-        <!-- Bicycle Riding Container (Mega Size: Moves 0% to 100% along line) -->
-        <div id="loadingCycleContainer" class="absolute -top-24 sm:-top-32 md:-top-36 left-0 -translate-x-1/2 transition-all duration-300 pointer-events-none flex flex-col items-center z-10">
-          <div class="w-56 h-40 sm:w-72 sm:h-48 md:w-80 md:h-56 relative flex items-center justify-center overflow-hidden [clip-path:inset(0_0_18%_0)]">
+        <!-- Bicycle Riding Container (Moves 0% to 100% directly riding on top of line) -->
+        <div id="loadingCycleContainer" class="absolute -top-12 sm:-top-16 left-0 -translate-x-1/2 transition-all duration-100 pointer-events-none flex flex-col items-center z-20">
+          <div class="w-16 h-12 sm:w-20 sm:h-16 relative flex items-center justify-center">
             
             <!-- Video Source for Real-Time Background Removal Engine (0812.mp4) -->
             <video id="cycleVideoElement" autoplay loop muted playsinline class="hidden">
               <source src="./0812.mp4" type="video/mp4"/>
               <source src="0812.mp4" type="video/mp4"/>
-              <source src="./v1.mp4" type="video/mp4"/>
             </video>
 
-            <!-- Real-Time Transparent Canvas (Renders ONLY pure white cycle with 100% transparent background) -->
-            <canvas id="cycleCanvasElement" class="w-full h-full object-contain filter drop-shadow-[0_4px_10px_rgba(255,255,255,0.7)]"></canvas>
+            <!-- Real-Time Transparent Canvas -->
+            <canvas id="cycleCanvasElement" class="hidden w-full h-full object-contain filter drop-shadow-[0_4px_10px_rgba(255,255,255,0.7)]"></canvas>
 
-            <!-- Razor Sharp Pure White Vector Bicycle Fallback -->
-            <svg id="cycleSvgFallback" class="w-full h-full object-contain filter drop-shadow-[0_4px_8px_rgba(255,255,255,0.9)]" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Razor Sharp White & Red Samajwadi Bicycle Icon -->
+            <svg id="cycleSvgFallback" class="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(255,255,255,0.95)]" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Rear Wheel -->
               <circle cx="25" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
-              <circle cx="25" cy="42" r="2.5" fill="#FFFFFF"/>
+              <circle cx="25" cy="42" r="3" fill="#E11D48"/>
               <!-- Front Wheel -->
               <circle cx="75" cy="42" r="14" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
-              <circle cx="75" cy="42" r="2.5" fill="#FFFFFF"/>
+              <circle cx="75" cy="42" r="3" fill="#E11D48"/>
               <!-- Frame & Chain -->
               <path d="M25 42 L42 42 L55 24 L25 42 Z" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" fill="none"/>
               <path d="M42 42 L38 20 L46 20" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
               <!-- Handlebar & Front Fork -->
               <path d="M75 42 L64 16 L72 16 M68 22 L55 24" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
               <!-- Seat -->
-              <path d="M33 20 L43 20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+              <path d="M33 20 L43 20" stroke="#E11D48" stroke-width="5" stroke-linecap="round"/>
               <!-- Pedal Crank -->
-              <circle cx="42" cy="42" r="4" fill="#FFFFFF"/>
+              <circle cx="42" cy="42" r="4" fill="#F59E0B"/>
             </svg>
 
           </div>
