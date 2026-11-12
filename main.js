@@ -145,7 +145,7 @@ function openImageModal(imgSrc) {
   const modalTitle = document.getElementById('image-modal-title');
   if (modal && modalImg) {
     modalImg.src = imgSrc;
-    if (modalTitle) modalTitle.innerText = `ElectraPulse Platform Screenshot — ${imgSrc.replace('/', '')}`;
+    if (modalTitle) modalTitle.innerText = `ITLC Platform Screenshot — ${imgSrc.replace('/', '')}`;
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     if (window.lucide) lucide.createIcons();
